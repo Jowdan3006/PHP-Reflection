@@ -25,6 +25,7 @@ require __DIR__."/../vendor/autoload.php";
 /*
     Initialize custom environmental variables in .env file.
 */
+
 $dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv->load();
 ?>

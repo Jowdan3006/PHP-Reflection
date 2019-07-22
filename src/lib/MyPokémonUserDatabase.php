@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ .'/../config.php';
+use \Firebase\JWT\JWT;
 class MyPokémonUserDatabase
 {
     private $type;
@@ -59,9 +60,6 @@ class MyPokémonUserDatabase
             echo $e->getMessage();
             echo "</pre>";
         }
-        $userPass = $this->getValue('password', 'username', $user);
-        var_dump($userPass);
-        exit;
     }
 
     public function login($user, $pass, $type) {
@@ -87,7 +85,7 @@ class MyPokémonUserDatabase
         $check = password_verify($pass, $userPass);
         if ($check) {
             $this->createJWT($user, $type);
-            header("Location:login.php?r=success");
+            header("Location:index.php?r=success");
         } else {
             switch ($type) {
                 case 'username':
@@ -100,6 +98,41 @@ class MyPokémonUserDatabase
                     header("Location:login.php?error=error");
                     break;
             }
+        }
+    }
+
+    public function resetPassword($username, $email, $pass, $admin = false) {
+        if ($admin) {
+            $criteria = ['username' => $username, 'email' => $email];
+            $available = $this->checkForUser($criteria);
+            switch ($available) {
+                case 3: 
+                    $this->changeValue('password', $pass, 'username', $username);
+                    header("Location:resetPass.php?r=success");
+                    break;
+
+                case 2: header("Location:resetPass.php?error=miss"); exit;
+                case 1: header("Location:resetPass.php?error=miss"); exit;
+                case false: header("Location:resetPass.php?error=miss"); exit;
+                default: header("Location:resetPass.php?error=error"); exit;
+            }
+        } else {
+            header("Location:resetPass.php?error=admin");
+            exit;
+        }
+    }
+
+    private function changeValue($what, $value, $where, $who) {
+        $sql = ("UPDATE users SET $what = ? WHERE $where = ?");
+        try {
+            $reg = $this->db->prepare($sql);
+            $reg->bindParam(1, $value, PDO::PARAM_STR);
+            $reg->bindParam(2, $who, PDO::PARAM_STR);
+            $reg->execute();
+        } catch (Exception $e) {
+            echo "<pre>Error when registering user";
+            echo $e->getMessage();
+            echo "</pre>";
         }
     }
 
@@ -154,12 +187,47 @@ class MyPokémonUserDatabase
             echo $e->getMessage();
             echo "</pre>";
         }
-        $responce = $result->fetch(PDO::FETCH_ASSOC);
-        return $responce[$what];
+        $response = $result->fetch(PDO::FETCH_ASSOC);
+        return $response[$what];
+    }
+
+    private function getValues($what, $where, $value) {
+        $sql = "SELECT $what FROM users WHERE $where = ? ";
+        try {
+            $result = $this->db->prepare($sql);
+            $result->bindParam(1, $value, PDO::PARAM_STR);
+            $result->execute();
+        } catch (Exception $e) {
+            echo "<pre>Error when checking database";
+            echo $e->getMessage();
+            echo "</pre>";
+        }
+        $response = $result->fetchall(PDO::FETCH_ASSOC);
+        return $response[0];
     }
 
     private function createJWT($user, $type) {
+        if ($type == 'username') {
+            $userData = $this->getValues('user_id, username, email', 'username', $user);
+        } else {
+            $userData = $this->getValue('user_id, username, email', 'email', $user);
+        }
+        $time = time();
+        $expire = $time + 3600;
+        $token = array(
+            "iss" => getenv("MY_DB_NAME"),
+            "iat" => $time,
+            "nbf" => $time,
+            "exp" => $expire,
+            "data" => array(
+                "id" => $userData['user_id'],
+                "email" => $userData['email'],
+                "username" => $userData['username']
+            )
+        );
 
+        $jwt = JWT::encode($token, getenv("SECRET_PASSWORD"), 'HS256');
+        setcookie("user", $jwt, $expire, '/', 'localhost', FALSE, TRUE);
     }
 }
 ?>

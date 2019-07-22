@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             $errorMessage .= 'conf';
             $error = true;
-    }
+        }
     } else {
         $errorMessage .= 'pass';
         $error = true;
@@ -132,7 +132,7 @@ require_once INC_PATH . "/head.php";
                     <label for="passwordConfirm">Confirm Password</label>
                     <input type="password" class="form-control" id="passwordConfirm" name="conf" placeholder="Confirm Password">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Register</button>
             </form>
 
             <div>

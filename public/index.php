@@ -1,10 +1,12 @@
 <?php 
 require_once __DIR__ .'/../src/config.php'; 
+use function GuzzleHttp\json_decode;
 
 $pageTitle = "MYPHPokémon";
 require_once INC_PATH . "/head.php";
 require_once LIB_PATH . "/MyPokémonUserDatabase.php";
 require_once LIB_PATH . "/PokeAPI.php";
+
 ?>
 
     <body>

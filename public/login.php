@@ -91,11 +91,14 @@ require_once INC_PATH . "/head.php";
                     <?php if(isset($_SESSION['user'])) { echo 'value="'.$_SESSION['user'].'"';} ?>
                 >
             </div>
-            <div class="form-group">
+            <div class="form-group" style="margin-bottom: 0;">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" name="pass" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div style="margin-bottom: 1rem;">
+                <a href="<?php echo PUB_PATH . "resetPass.php" ?>">Forgot your Password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div>
 
