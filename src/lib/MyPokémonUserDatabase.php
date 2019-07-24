@@ -60,6 +60,8 @@ class MyPokémonUserDatabase
             echo $e->getMessage();
             echo "</pre>";
         }
+        $this->createJWT($user, 'username');
+        header('Location:index.php?r=reg');
     }
 
     public function login($user, $pass, $type) {

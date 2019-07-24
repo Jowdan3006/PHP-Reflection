@@ -1,3 +1,25 @@
+span.badge.version-black-2 {
+    background-color: black!important;
+}
+.version-white, .version-white-2 {
+    background-color: white;
+}
+.version-soulsilver {
+    background-color: silver;
+}
+.version-heartgold {
+    background-color: gold;
+}
+.version-sapphire {
+    background-color: blue;
+}
+.version-ruby {
+    background-color: red;
+}
+.version-emerald {
+    background-color: green;
+}
+
 @media only screen and (max-width: 992px){
     .navbar-nav {
         text-align: center;
