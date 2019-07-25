@@ -123,9 +123,30 @@ class MyPokémonUserDatabase
             exit;
         }
     }
-
-    private function changeValue($what, $value, $where, $who) {
-        $sql = ("UPDATE users SET $what = ? WHERE $where = ?");
+    private function insertValues($columns, $values, $into = 'favorite_pokemon') {
+        $sql = "INSERT INTO $into (";
+        foreach ($columns as $column) {
+            $sql += "$column ,";
+        }
+        $sql = substr($sql, 0, -1) . "VALUES (";
+        for ($i = 0; $i < count($values); $i++) {
+            $sql += '? ,';
+        }
+        $sql = substr($sql, 0, -1) . ")";
+        try {
+            $reg = $this->db->prepare($sql);
+            for ($i = 0; $i < count($values); $i++) {
+                $reg->bindParam($i, $values[$i], PDO::PARAM_STR);
+            }
+            $reg->execute();
+        } catch (Exception $e) {
+            echo "<pre>Error when registering user";
+            echo $e->getMessage();
+            echo "</pre>";
+        }
+    }
+    private function changeValue($what, $value, $where, $who, $from = 'users') {
+        $sql = ("UPDATE $from SET $what = ? WHERE $where = ?");
         try {
             $reg = $this->db->prepare($sql);
             $reg->bindParam(1, $value, PDO::PARAM_STR);
@@ -161,8 +182,8 @@ class MyPokémonUserDatabase
         return false;
     }
 
-    private function checkForValues($where, $value) {
-        $sql = "SELECT user_id FROM users WHERE $where = ? ";
+    private function checkForValues($where, $value, $from = 'users') {
+        $sql = "SELECT user_id FROM $from WHERE $where = ? ";
         try {
             $check = $this->db->prepare($sql);
             $check->bindParam(1, $value, PDO::PARAM_STR);
@@ -178,8 +199,8 @@ class MyPokémonUserDatabase
         return false;
     }
 
-    private function getValue($what, $where, $value) {
-        $sql = "SELECT $what FROM users WHERE $where = ? ";
+    private function getValue($what, $where, $value, $from = 'users') {
+        $sql = "SELECT $what FROM $from WHERE $where = ? ";
         try {
             $result = $this->db->prepare($sql);
             $result->bindParam(1, $value, PDO::PARAM_STR);
@@ -190,11 +211,14 @@ class MyPokémonUserDatabase
             echo "</pre>";
         }
         $response = $result->fetch(PDO::FETCH_ASSOC);
+        if ($what == '*') {
+            return $response;
+        }
         return $response[$what];
     }
 
-    private function getValues($what, $where, $value) {
-        $sql = "SELECT $what FROM users WHERE $where = ? ";
+    private function getValues($what, $where, $value, $from = 'users') {
+        $sql = "SELECT $what FROM $from WHERE $where = ? ";
         try {
             $result = $this->db->prepare($sql);
             $result->bindParam(1, $value, PDO::PARAM_STR);
@@ -230,6 +254,26 @@ class MyPokémonUserDatabase
 
         $jwt = JWT::encode($token, getenv("SECRET_PASSWORD"), 'HS256');
         setcookie("user", $jwt, $expire, '/', 'localhost', FALSE, TRUE);
+        setcookie("logged", 'true', time() + 86400 , '/', 'localhost', FALSE, TRUE);
+    }
+
+    public function favoritePokemon($user, $pokemonId)
+    {
+        $userEntry = $this->getValue('*', 'user_id', $user, 'favorite_pokemon');
+        if ($userEntry) {
+            $pokemonIdArray = explode(', ', $userEntry['pokemon_id']);
+            if (($pokemonIdKey = array_search($pokemonId, $pokemonIdArray)) !== FALSE) {
+                unset($pokemonIdArray[$pokemonIdKey]);
+            } else {
+                $pokemonIdArray[] = $pokemonId;
+            }
+            $pokemonIdString = implode(', ', $pokemonIdArray);
+            $this->changeValue('pokemon_id', $pokemonIdString, 'user_id', $user, 'favorite_pokemon');
+        } else {
+            $pokemonIdString = $pokemonId;
+            $this->insertValues(['user_id', 'pokemon_id'], ['$user', '$pokemonIdString']);
+        }
+
     }
 }
 ?>

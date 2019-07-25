@@ -10,7 +10,7 @@ session_start();
 if (isset($_SESSION['pokemonList'])) {
     $pokemonList == $_SESSION['pokemonList'];
 } else {
-    $pokemonList = new PokeAPI(null, null, true);
+    $pokemonList = new PokeAPI(null, 'list');
 }
 
 $message = '';
@@ -27,28 +27,29 @@ if (isset($_GET['s']) && (isset($_GET['filter']))) {
     $search = $_GET['s'];
     $filter = $_GET['filter'];
 
-    if (isset($_SESSION['pokemon']) && ($filter == 'ran' || $filter == 'type') && !empty($search) && ($_SESSION['pokemon']->getType() == $search) && (isset($_SESSION['filter']) && $_SESSION['filter'] == $filter)) {
+    if (isset($_SESSION['pokemon']) && ($filter == 'ran' || $filter == 'type') && !empty($search) && 
+        $_SESSION['pokemon']->getType() == $search && isset($_SESSION['filter']) && $_SESSION['filter'] == $filter) {
         $pokemon = $_SESSION['pokemon'];
         if ($filter == 'ran') {
             $pokemon->randomPokemon();
         }
-    } else if (empty($filter) || $filter == 'ran' || empty($search)) {
-        $pokemon = new PokeAPI($search, null, null, true);
-    } else if ($filter == 'nid') {
-        $pokemon = new PokeAPI($search);
-    } else if ($filter == 'type') {
-        $pokemon = new PokeAPI(null, $search);
+    }
+    if (!($filter == 'type' && empty($search))) {
+        $pokemon = new PokeAPI($search, $filter);
+
+        $_SESSION['filter'] = $filter;
+        $_SESSION['pokemon'] = $pokemon;
     }
 
-    if (!$pokemon->getPokemon() && $filter == 'type') {
-        $message = 'No Pokémon found with type of "'.$search.'"';
-    } else if (!$pokemon->getPokemon()) {
-        $message = 'No Pokémon found with name of "'.$search.'"';
-    }
-    $_SESSION['filter'] = $filter;
-    $_SESSION['pokemon'] = $pokemon;
+        if (!isset($pokemon)) {
+            $message = 'Please search for a Pokémon type.';
+        } else if (!$pokemon->getPokemon() && $filter == 'type') {
+            $message = 'No Pokémon found with type of "'.$search.'".';
+        } else if (!$pokemon->getPokemon()) {
+            $message = 'No Pokémon found with name of "'.$search.'".';
+        }
 } else {
-    session_unset();
+    unset($_SESSION['pokemon']);
 }
 ?>
 

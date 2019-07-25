@@ -1,11 +1,4 @@
-<?php require_once __DIR__ .'/../config.php';
-use \Firebase\JWT\JWT;
-
-if (isset($_COOKIE['user'])) {
-    $cookieData = $_COOKIE['user'];
-    $userData = JWT::decode($cookieData, getenv("SECRET_PASSWORD"), array('HS256'));
-}
-?>
+<?php require_once __DIR__ .'/../config.php';?>
 <!DOCTYPE html>
 <html>
 <head>

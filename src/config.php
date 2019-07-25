@@ -15,7 +15,10 @@ defined("LIB_PATH")
     or define("LIB_PATH", realpath(dirname(__FILE__) . '/lib'));
 
 defined("PUB_PATH")
-    or define("PUB_PATH", realpath(dirname(__FILE__) . '../public'));
+    or define("PUB_PATH", realpath(dirname(__FILE__, 2) . '/public'));
+
+defined("JS_PATH")
+    or define("JS_PATH", dirname('../') . '/js');
 
 /*
     composer autoloader.

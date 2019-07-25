@@ -1,4 +1,4 @@
-span.badge.version-black-2 {
+.version-black, .version-black-2 {
     background-color: black!important;
 }
 .version-white, .version-white-2 {
@@ -20,6 +20,15 @@ span.badge.version-black-2 {
     background-color: green;
 }
 
+#expiredSession {
+    position: fixed;
+    top: 70px;
+    z-index: 1000;
+}
+#expiredSession div {
+    width: 50%;
+    margin: auto;
+}
 @media only screen and (max-width: 992px){
     .navbar-nav {
         text-align: center;

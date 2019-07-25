@@ -10,43 +10,46 @@ class PokeAPI
     protected $speciesArray = [];
     protected $type = null;
 
-    public function __construct($id = null, $type = null, $list = null, $ran = null)
+    public function __construct($search = null, $type = null)
     {
         try {
             $pokeapi = new \GuzzleHttp\Client();
-            if ($list === true) {
+            if ($type == 'list') {
                 $pokeid = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/pokemon?limit=1000');
-            } else if ($ran === true) {
-                if (!empty($id)) {
+            } else if ($type == 'ran' || $type == null || ($search == null && $type == 'nid')) {
+                if (!empty($search)) {
                     try {
-                        $pokeid = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/type/'.$id);
+                        $pokeid = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/type/'.$search);
                         $randomType = true;
-                        $this->type = $id;
+                        $this->type = $search;
                     } catch (Exception $e) {}
                 }
-                if (!isset($pokeid)) {    
+                if (!isset($pokeid)) {
+                    $randomType = false;
                     $ran = random_int(1, $this->max);
                     $pokeid = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/pokemon/'.$ran);
                 }
-            } else if (!empty($type)) {
-                $pokeid = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/type/'.$type);
+            } else if ($type == 'type') {
+                $pokeid = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/type/'.$search);
                 $this->type = $type;
-            } else if (!empty($id)) {
-                $pokeid = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/pokemon/'.$id);
+            } else if ($type == 'nid') {
+                $pokeid = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/pokemon/'.$search);
             }
             $pokeid = json_decode($pokeid->getBody());
-            if ($list === true) {
+            if ($type == 'list') {
                 $this->pokemon = $pokeid->results;
                 $this->arrangePokemon();
-            } else if ($ran === true) {
-                $this->pokemon = $pokeid->pokemon;
+            } else if ($type == 'ran' || $type == null || ($search == null && $type == 'nid')) {
                 if ($randomType) {
+                    $this->pokemon = $pokeid->pokemon;
                     $this->arrangePokemon();
                     $this->randomPokemon = $this->pokemon;
                     $this->pokemon = null;
                     $this->randomPokemon();
+                } else {
+                    $this->pokemon = $pokeid;
                 }
-            } else if (!empty($type)) {
+            } else if ($type == 'type') {
                 $this->pokemon = $pokeid->pokemon;
                 $this->arrangePokemon();
             } else {

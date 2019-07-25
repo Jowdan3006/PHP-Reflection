@@ -1,4 +1,4 @@
-<div class="card" style="width: 450px; margin: auto;">
+<div class="card" id="pokeCard0" style="width: 450px; margin: auto;">
     <div style="padding: 25px">
         <img class="card-img-top" max-height="350px" src="<?php echo $pokemon->getImage(); ?>" alt="Card image cap">
     </div>
@@ -21,7 +21,7 @@
                         foreach ($flavorValue['version'] as $version) {
                             echo '<span class="badge version-'.$version.'">'.$version.'</span>';
                         }
-                    }else {
+                    } else {
                         echo '<span class="badge version-'.$flavorValue['version'][0].'">'.$flavorValue['version'][0].'</span>';
                     }
                     echo '</p>';
@@ -37,5 +37,6 @@
             </a>
         </div>
         <a href="<?php echo "https://pokemondb.net/pokedex/".$pokemon->getName().'"'; ?>" class="btn btn-primary" target="_blank" style="margin-left: 15px;">View on Pokémon Database</a>
+        <button class="favorite" ><i class="fas fa-star"></button></i>
     </div>
 </div>
