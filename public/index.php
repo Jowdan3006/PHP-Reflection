@@ -1,6 +1,5 @@
 <?php 
 require_once __DIR__ .'/../src/config.php';
-require_once INC_PATH . "/userData.php";
 
 $pageTitle = "MYPHPokémon";
 require_once INC_PATH . "/head.php";
@@ -14,9 +13,6 @@ if (isset($_SESSION['pokemon'])) {
     unset($_SESSION['pokemon']);
 }
 $_SESSION['pokemon'] = $pokemon;
-$db = new MyPokémonUserDatabase;
-$db->create();
-$db->favoritePokemon($currentUserId, $pokemon->getId());
 ?>
 
     <body>

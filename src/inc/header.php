@@ -1,3 +1,4 @@
+<?php require_once INC_PATH . "/userData.php"; ?>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 1rem;">
         <div class="container">

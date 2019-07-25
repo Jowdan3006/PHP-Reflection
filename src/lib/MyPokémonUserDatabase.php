@@ -126,23 +126,25 @@ class MyPokémonUserDatabase
     private function insertValues($columns, $values, $into = 'favorite_pokemon') {
         $sql = "INSERT INTO $into (";
         foreach ($columns as $column) {
-            $sql += "$column ,";
+            $sql .= "$column ,";
         }
-        $sql = substr($sql, 0, -1) . "VALUES (";
+        $sql = substr($sql, 0, -1) . ") VALUES (";
         for ($i = 0; $i < count($values); $i++) {
-            $sql += '? ,';
+            $sql .= '? ,';
         }
         $sql = substr($sql, 0, -1) . ")";
         try {
             $reg = $this->db->prepare($sql);
-            for ($i = 0; $i < count($values); $i++) {
-                $reg->bindParam($i, $values[$i], PDO::PARAM_STR);
+            for ($i = 1; $i <= count($values); $i++) {
+                $reg->bindParam($i, $values[$i-1], PDO::PARAM_STR);
             }
             $reg->execute();
+            return true;
         } catch (Exception $e) {
-            echo "<pre>Error when registering user";
+            echo "<pre>Error inserting user into favorites";
             echo $e->getMessage();
             echo "</pre>";
+            return false;
         }
     }
     private function changeValue($what, $value, $where, $who, $from = 'users') {
@@ -152,10 +154,12 @@ class MyPokémonUserDatabase
             $reg->bindParam(1, $value, PDO::PARAM_STR);
             $reg->bindParam(2, $who, PDO::PARAM_STR);
             $reg->execute();
+            return true;
         } catch (Exception $e) {
             echo "<pre>Error when registering user";
             echo $e->getMessage();
             echo "</pre>";
+            return false;
         }
     }
 
@@ -260,20 +264,36 @@ class MyPokémonUserDatabase
     public function favoritePokemon($user, $pokemonId)
     {
         $userEntry = $this->getValue('*', 'user_id', $user, 'favorite_pokemon');
+        $change = false;
+        $insert = false;
+        $add = false;
         if ($userEntry) {
-            $pokemonIdArray = explode(', ', $userEntry['pokemon_id']);
-            if (($pokemonIdKey = array_search($pokemonId, $pokemonIdArray)) !== FALSE) {
-                unset($pokemonIdArray[$pokemonIdKey]);
+            if (!empty($userEntry['pokemon_id'])) {
+                $pokemonIdArray = explode(', ', $userEntry['pokemon_id']);
+                if (($pokemonIdKey = array_search($pokemonId, $pokemonIdArray)) !== FALSE) {
+                    unset($pokemonIdArray[$pokemonIdKey]);
+                    $add = false;
+                } else {
+                    $pokemonIdArray[] = $pokemonId;
+                    $add = true;
+                }
+                $pokemonIdString = implode(', ', $pokemonIdArray);
             } else {
-                $pokemonIdArray[] = $pokemonId;
+                $pokemonIdString = $pokemonId;
+                $add = true;
             }
-            $pokemonIdString = implode(', ', $pokemonIdArray);
-            $this->changeValue('pokemon_id', $pokemonIdString, 'user_id', $user, 'favorite_pokemon');
+            $change = $this->changeValue('pokemon_id', $pokemonIdString, 'user_id', $user, 'favorite_pokemon');
         } else {
             $pokemonIdString = $pokemonId;
-            $this->insertValues(['user_id', 'pokemon_id'], ['$user', '$pokemonIdString']);
+            $insert = $this->insertValues(['user_id', 'pokemon_id'], [$user, $pokemonIdString]);
+        }
+        if ($insert || ($change && $add)) {
+            return true;
+        } else {
+            return false;
         }
 
+        return null;
     }
 }
 ?>
