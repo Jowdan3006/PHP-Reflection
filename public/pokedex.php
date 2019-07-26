@@ -7,10 +7,17 @@ require LIB_PATH . "/MyPokémonUserDatabase.php";
 require LIB_PATH . "/PokeAPI.php";
 
 session_start();
-if (isset($_SESSION['pokemonList'])) {
-    $pokemonList == $_SESSION['pokemonList'];
-} else {
-    $pokemonList = new PokeAPI(null, 'list');
+// if (isset($_SESSION['pokemonList'])) {
+//     $pokemonList == $_SESSION['pokemonList'];
+// } else {
+//     $pokemonList = new PokeAPI(null, 'list');
+// }
+
+$db = new MyPokémonUserDatabase;
+$db->create();
+
+if (isset($userData)) {
+    $pokemonIdArray = $db->getFavoritePokemon($currentUserId);
 }
 
 $message = '';
@@ -51,6 +58,7 @@ if (isset($_GET['s']) && (isset($_GET['filter']))) {
 } else {
     unset($_SESSION['pokemon']);
 }
+
 ?>
 
     <body>

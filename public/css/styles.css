@@ -20,6 +20,39 @@
     background-color: green;
 }
 
+.poke-fav {
+    font-size: 2rem;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.favorite-count {
+    color: #333333;
+    background-color: rgba(207, 189, 20, 0.5);
+    width: 1.25rem;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 1;
+    margin: 0;
+    font-size: 1.25rem;
+    position: absolute;
+    right: 50px;
+    top: 6px;
+}
+
+.poke-fav:hover {
+    cursor: pointer;
+}
+.fas {
+    color: gold;
+}
+.far {
+    color: grey;
+}
+.far:hover {
+    color: gold;
+}
+
 #expiredSession {
     position: fixed;
     top: 70px;

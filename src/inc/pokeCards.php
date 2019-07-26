@@ -1,4 +1,12 @@
 <div class="card" style="max-width: 350px">
+    <p class="favorite-count"><?php echo $db->getCountFavoritePokemon($pokemon->getId($id), false) ?: 0 ?></p>
+    <?php if (isset($userData)) {
+        if ($pokemonIdArray && in_array($pokemon->getId($id), $pokemonIdArray)) {
+            echo '<i class="poke-fav fas fa-star" data-poke-array-index="'.$id.'"></i>';
+        } else {
+            echo '<i class="poke-fav far fa-star" data-poke-array-index="'.$id.'"></i>';
+        }
+    } ?>
     <div style="padding: 25px">
         <img class="card-img-top" src="<?php echo $pokemon->getImage($id); ?>" alt="Card image cap">
     </div>

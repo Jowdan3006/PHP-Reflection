@@ -1,4 +1,3 @@
-<?php require_once INC_PATH . "/userData.php"; ?>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 1rem;">
         <div class="container">
@@ -13,7 +12,7 @@
                 </div>
             </div>
             <?php } ?>
-            <a class="navbar-brand d-flex" href="<?php echo PUB_PATH . "index.php" ?>">
+            <a class="navbar-brand d-flex" href="index.php">
                 <div class="logo"></div>
                 MYPHPokémon
             </a>

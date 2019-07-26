@@ -6,8 +6,16 @@ require_once INC_PATH . "/head.php";
 require_once LIB_PATH . "/MyPokémonUserDatabase.php";
 require_once LIB_PATH . "/PokeAPI.php";
 
+$db = new MyPokémonUserDatabase;
+$db->create();
+
+if (isset($userData)) {
+    $pokemonIdArray = $db->getFavoritePokemon($currentUserId);
+}
 
 $pokemon = new PokeAPI;
+$count = $db->getCountFavoritePokemon($pokemon->getId(), false);
+
 session_start();
 if (isset($_SESSION['pokemon'])) {
     unset($_SESSION['pokemon']);

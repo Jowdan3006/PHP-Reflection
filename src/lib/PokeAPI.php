@@ -34,39 +34,57 @@ class PokeAPI
                 $this->type = $type;
             } else if ($type == 'nid') {
                 $pokeid = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/pokemon/'.$search);
+            } else if ($type == 'set') {
+                $this->type = 'type';
+                $count = 0;
+                foreach ($search as $pokemon) {
+                    $this->pokemon[] = $pokemon;
+                    $this->speciesArray[] = $count;
+                    $count++;
+                }
             }
-            $pokeid = json_decode($pokeid->getBody());
-            if ($type == 'list') {
-                $this->pokemon = $pokeid->results;
-                $this->arrangePokemon();
-            } else if ($type == 'ran' || $type == null || ($search == null && $type == 'nid')) {
-                if ($randomType) {
+            if (isset($pokeid)) {
+                $pokeid = json_decode($pokeid->getBody());
+                if ($type == 'list') {
+                    $this->pokemon = $pokeid->results;
+                    $this->arrangePokemon();
+                } else if ($type == 'ran' || $type == null || ($search == null && $type == 'nid')) {
+                    if ($randomType) {
+                        $this->pokemon = $pokeid->pokemon;
+                        $this->arrangePokemon();
+                        $this->randomPokemon = $this->pokemon;
+                        $this->pokemon = null;
+                        $this->randomPokemon();
+                    } else {
+                        $this->pokemon = $pokeid;
+                    }
+                } else if ($type == 'type') {
                     $this->pokemon = $pokeid->pokemon;
                     $this->arrangePokemon();
-                    $this->randomPokemon = $this->pokemon;
-                    $this->pokemon = null;
-                    $this->randomPokemon();
                 } else {
                     $this->pokemon = $pokeid;
                 }
-            } else if ($type == 'type') {
-                $this->pokemon = $pokeid->pokemon;
-                $this->arrangePokemon();
-            } else {
-                $this->pokemon = $pokeid;
+            } else if ($type == 'set') {
             }
         } catch (Exception $e) {
             $this->pokemon = false;
         }
     }
 
-    public function getId()
+    public function getId($id = 0)
     {
+        if ($this->type == 'set') {
+            return $this->speciesArray[$id]['id'];
+        }
+        if (is_array($this->pokemon)) {
+            return $this->pokemon[$id]['id'];
+        }
         return $this->pokemon->id;
     }
 
     public function getName($id = 0)
-    {   if (is_array($this->pokemon)) {
+    {   
+        if (is_array($this->pokemon)) {
             return $this->pokemon[$id]['name'];
         }
         return $this->pokemon->name;
@@ -121,9 +139,9 @@ class PokeAPI
         if (count($this->pokemon) > 400) {
             foreach ($this->pokemon as $pokemon) {
                 $id = substr($pokemon->url, 34, -1);
-                if (strpos($pokemon->name, 'totem')) {
+                if (strpos($pokemon->name, 'totem') || strpos($pokemon->name, '-battle-bond') || strpos($pokemon->name, '-cosplay')) {
                 } else {
-                    $pokeName[] = ['name' => $pokemon->name, 'url' => $pokemon->url, 'id' => $id];
+                    $pokeName[$id] = ['name' => $pokemon->name, 'url' => $pokemon->url, 'id' => $id];
                     $this->speciesArray[] = $count;
                     $count++;
                 }

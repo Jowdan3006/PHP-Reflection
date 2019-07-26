@@ -14,7 +14,7 @@ if (isset($_COOKIE['user'])) {
             $currentUserId = $userData->data->id;
             $currentUserEmail = $userData->data->email;
             $currentUserUsername = $userData->data->username;
-            if ($userData->iat > time() + 360) {
+            if ($userData->iat < (time() - 360)) {
                 $time = time();
                 $expire = $time + 3600;
                 $token = array(
@@ -30,7 +30,7 @@ if (isset($_COOKIE['user'])) {
                 );
                 $jwt = JWT::encode($token, getenv("SECRET_PASSWORD"), 'HS256');
                 setcookie("user", $jwt, $expire, '/', 'localhost', FALSE, TRUE);
-                setcookie("logged", 'true', time() + 86400 , '/', 'localhost', FALSE, TRUE);
+                setcookie("logged", 'true', time() + 7200 , '/', 'localhost', FALSE, TRUE);
             }
         }
     } catch (Exception $e) {

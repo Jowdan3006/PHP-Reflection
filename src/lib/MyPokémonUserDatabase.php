@@ -37,7 +37,8 @@ class MyPokémonUserDatabase
         $this->db = $pdo;
     }
 
-    public function register($user, $email, $pass) {
+    public function register($user, $email, $pass)
+    {
         $criteria = ['username' => $user, 'email' => $email];
         $available = $this->checkForUser($criteria);
         if ($available !== false) {
@@ -48,7 +49,7 @@ class MyPokémonUserDatabase
                 default: header("Location:register.php?error=error"); exit;
             }
         }
-        $sql = ("INSERT INTO users (username, email, password) VALUES ( ? , ? , ? ) ");
+        $sql = "INSERT INTO users (username, email, password) VALUES ( ? , ? , ? ) ";
         try {
             $reg = $this->db->prepare($sql);
             $reg->bindParam(1, $user, PDO::PARAM_STR);
@@ -64,7 +65,8 @@ class MyPokémonUserDatabase
         header('Location:index.php?r=reg');
     }
 
-    public function login($user, $pass, $type) {
+    public function login($user, $pass, $type)
+    {
         if ($type == 'user') {
             $type = 'username';
         }
@@ -103,7 +105,8 @@ class MyPokémonUserDatabase
         }
     }
 
-    public function resetPassword($username, $email, $pass, $admin = false) {
+    public function resetPassword($username, $email, $pass, $admin = false)
+    {
         if ($admin) {
             $criteria = ['username' => $username, 'email' => $email];
             $available = $this->checkForUser($criteria);
@@ -123,7 +126,8 @@ class MyPokémonUserDatabase
             exit;
         }
     }
-    private function insertValues($columns, $values, $into = 'favorite_pokemon') {
+    private function insertValues($columns, $values, $into = 'favorite_pokemon')
+    {
         $sql = "INSERT INTO $into (";
         foreach ($columns as $column) {
             $sql .= "$column ,";
@@ -147,8 +151,10 @@ class MyPokémonUserDatabase
             return false;
         }
     }
-    private function changeValue($what, $value, $where, $who, $from = 'users') {
-        $sql = ("UPDATE $from SET $what = ? WHERE $where = ?");
+
+    private function changeValue($what, $value, $where, $who, $from = 'users')
+    {
+        $sql = "UPDATE $from SET $what = ? WHERE $where = ?";
         try {
             $reg = $this->db->prepare($sql);
             $reg->bindParam(1, $value, PDO::PARAM_STR);
@@ -163,7 +169,33 @@ class MyPokémonUserDatabase
         }
     }
 
-    private function checkForUser($values = []) {
+    private function changeValues($columns, $values, $where, $who, $from = 'users')
+    {
+        $sql = "UPDATE $from SET ";
+
+        foreach ($columns as $column) {
+            $sql .= "$column = ? ,";
+        }
+
+        $sql = substr($sql, 0, -1) . " WHERE $where = ?";
+        try {
+            $reg = $this->db->prepare($sql);
+            for ($i = 1; $i <= count($values); $i++) {
+                $reg->bindParam($i, $values[$i-1], PDO::PARAM_STR);
+            }
+            $reg->bindParam(3, $who, PDO::PARAM_STR);
+            $reg->execute();
+            return true;
+        } catch (Exception $e) {
+            echo "<pre>Error when registering user";
+            echo $e->getMessage();
+            echo "</pre>";
+            return false;
+        }
+    }
+
+    private function checkForUser($values = [])
+    {
         $checkValues = [];
         foreach ($values as $type => $value) {
             $checkValues[] = $this->checkForValues($type, $value);
@@ -186,7 +218,8 @@ class MyPokémonUserDatabase
         return false;
     }
 
-    private function checkForValues($where, $value, $from = 'users') {
+    private function checkForValues($where, $value, $from = 'users')
+    {
         $sql = "SELECT user_id FROM $from WHERE $where = ? ";
         try {
             $check = $this->db->prepare($sql);
@@ -203,7 +236,8 @@ class MyPokémonUserDatabase
         return false;
     }
 
-    private function getValue($what, $where, $value, $from = 'users') {
+    private function getValue($what, $where, $value, $from = 'users')
+    {
         $sql = "SELECT $what FROM $from WHERE $where = ? ";
         try {
             $result = $this->db->prepare($sql);
@@ -221,7 +255,8 @@ class MyPokémonUserDatabase
         return $response[$what];
     }
 
-    private function getValues($what, $where, $value, $from = 'users') {
+    private function getValues($what, $where, $value, $from = 'users')
+    {
         $sql = "SELECT $what FROM $from WHERE $where = ? ";
         try {
             $result = $this->db->prepare($sql);
@@ -236,7 +271,8 @@ class MyPokémonUserDatabase
         return $response[0];
     }
 
-    private function createJWT($user, $type) {
+    private function createJWT($user, $type)
+    {
         if ($type == 'username') {
             $userData = $this->getValues('user_id, username, email', 'username', $user);
         } else {
@@ -258,42 +294,102 @@ class MyPokémonUserDatabase
 
         $jwt = JWT::encode($token, getenv("SECRET_PASSWORD"), 'HS256');
         setcookie("user", $jwt, $expire, '/', 'localhost', FALSE, TRUE);
-        setcookie("logged", 'true', time() + 86400 , '/', 'localhost', FALSE, TRUE);
+        setcookie("logged", 'true', time() + 7200 , '/', 'localhost', FALSE, TRUE);
     }
 
     public function favoritePokemon($user, $pokemonId)
-    {
-        $userEntry = $this->getValue('*', 'user_id', $user, 'favorite_pokemon');
-        $change = false;
-        $insert = false;
-        $add = false;
-        if ($userEntry) {
-            if (!empty($userEntry['pokemon_id'])) {
-                $pokemonIdArray = explode(', ', $userEntry['pokemon_id']);
-                if (($pokemonIdKey = array_search($pokemonId, $pokemonIdArray)) !== FALSE) {
-                    unset($pokemonIdArray[$pokemonIdKey]);
-                    $add = false;
-                } else {
-                    $pokemonIdArray[] = $pokemonId;
-                    $add = true;
-                }
-                $pokemonIdString = implode(', ', $pokemonIdArray);
+    {   
+        if (!empty($user) && !empty($pokemonId)) {
+            $userEntry = $this->getValue('*', 'user_id', $user, 'favorite_pokemon');
+            $change = false;
+            $change = $this->updateFavorite($user, $pokemonId, $userEntry, 'favorite_pokemon');
+            if ($change) {
+                return $this->countFavoritePokemon($pokemonId, $user);
             } else {
-                $pokemonIdString = $pokemonId;
-                $add = true;
+                return false;
             }
-            $change = $this->changeValue('pokemon_id', $pokemonIdString, 'user_id', $user, 'favorite_pokemon');
-        } else {
-            $pokemonIdString = $pokemonId;
-            $insert = $this->insertValues(['user_id', 'pokemon_id'], [$user, $pokemonIdString]);
         }
-        if ($insert || ($change && $add)) {
-            return true;
-        } else {
-            return false;
-        }
-
         return null;
+    }
+
+    private function updateFavorite($user, $pokemonId, $userEntry, $table)
+    {
+        if ($userEntry) {
+            if ($table == 'favorite_pokemon') {
+                if (!empty($userEntry['pokemon_id'])) {
+                    $pokemonIdArray = explode(', ', $userEntry['pokemon_id']);
+                    if (($pokemonIdKey = array_search($pokemonId, $pokemonIdArray)) !== FALSE) {
+                        unset($pokemonIdArray[$pokemonIdKey]);
+                    } else {
+                        $pokemonIdArray[] = $pokemonId;
+                    }
+                    $pokemonIdString = implode(', ', $pokemonIdArray);
+                } else {
+                    $pokemonIdString = $pokemonId;
+                }
+                return $this->changeValue('pokemon_id', $pokemonIdString, 'user_id', $user, $table);
+            } else if ($table == 'count_pokemon') {
+                $count = 1;
+                if (!empty($userEntry['user_id'])) {
+                    $userIdArray = explode(', ', $userEntry['user_id']);
+                    if (($userIdKey = array_search($user, $userIdArray)) !== FALSE) {
+                        unset($userIdArray[$userIdKey]);
+                    } else {
+                        $userIdArray[] = $user;
+                    }
+                    $count = count($userIdArray);
+                    $userIdString = implode(', ', $userIdArray);
+                } else {
+                    $userIdString = $user;
+                }
+                if ($this->changeValues(['user_id', 'count'], [$userIdString, $count], 'pokemon_id', $pokemonId, $table)) {
+                    return $count;
+                }
+            }
+        } else {
+            if ($table == 'favorite_pokemon') {
+                return $this->insertValues(['user_id', 'pokemon_id'], [$user, $pokemonId]);
+            } else if ($table == 'count_pokemon') {
+                if ($this->insertValues(['pokemon_id', 'user_id', 'count'], [$pokemonId, $user, 1], 'count_pokemon')) {
+                    return 1;
+                }
+            }
+        }
+    }
+
+    private function countFavoritePokemon($pokemonId, $user)
+    {
+        $userEntry = $this->getValue('*', 'pokemon_id', $pokemonId, 'count_pokemon');
+        return $this->updateFavorite($user, $pokemonId, $userEntry, 'count_pokemon');
+    }
+
+    public function getCountFavoritePokemon($pokemonId, $users = true)
+    {
+        if (!empty($pokemonId) && $users) {
+            $userIdString = $this->getValue('user_id', 'pokemon_id', $pokemonId, 'count_pokemon');
+            if (!empty($userIdString)) {
+                $userIdArray = explode(', ', $userIdString);
+                return $userIdArray;
+            }
+        } else if (!empty($pokemonId) && !$users) {
+            $count = $this->getValue('count', 'pokemon_id', $pokemonId, 'count_pokemon');
+            if (!empty($count)) {
+                return $count;
+            }
+        }
+        return false;
+    }
+
+    public function getFavoritePokemon($user)
+    {
+        if (!empty($user)) {
+            $pokemonIdString = $this->getValue('pokemon_id', 'user_id', $user, 'favorite_pokemon');
+            if (!empty($pokemonIdString)) {
+                $pokemonIdArray = explode(', ', $pokemonIdString);
+                return $pokemonIdArray;
+            }
+        }
+        return false;
     }
 }
 ?>

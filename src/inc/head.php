@@ -1,4 +1,5 @@
 <?php require_once __DIR__ .'/../config.php';?>
+<?php require_once INC_PATH . "/userData.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
