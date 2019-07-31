@@ -253,6 +253,13 @@ class PokeAPI
         }
         return $flavorValues;
     }
+
+    public function getNames() {
+        foreach ($this->pokemon as $pokemon) {
+            $name[] = $pokemon['name'];
+        }
+        return $name;
+    }
 }
 
 ?>

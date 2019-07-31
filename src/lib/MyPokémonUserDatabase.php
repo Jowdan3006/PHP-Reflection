@@ -391,5 +391,25 @@ class MyPokémonUserDatabase
         }
         return false;
     }
+
+    public function getTopPokemon() {
+        $sql = "SELECT pokemon_id FROM count_pokemon ORDER BY count DESC LIMIT 3";
+        try {
+            $result = $this->db->prepare($sql);
+            $result->execute();
+        } catch (Exception $e) {
+            echo "<pre>Error when checking database";
+            echo $e->getMessage();
+            echo "</pre>";
+        }
+        $response = $result->fetchall(PDO::FETCH_ASSOC);
+        if (!empty($response)) {
+            foreach ($response as $pokeId) {
+                $pokemonIdArray[] = $pokeId['pokemon_id'];
+            }
+            return $pokemonIdArray;
+        }
+        return null;
+    }
 }
 ?>

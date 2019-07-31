@@ -4,7 +4,7 @@
             <?php 
             if (isset($expiredSession) && $expiredSession && isset($_COOKIE['logged'])) { 
                 setcookie('logged', "", time(), '/');?>
-            <div class="container" id="expiredSession">
+            <div class="container" id="headerAlert">
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">Session has expired.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -21,29 +21,35 @@
             </button>
             <div class="navbar-collapse collapse w-100" id="collapsingNavbar">
                 <ul class="navbar-nav w-100">
-                    <li class="nav-item active">
+                    <li class="nav-item <?php echo $activePage == 'home' ? 'active' : '' ?>">
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pokedex.php">Pokédex</a>
+                        <a class="nav-link <?php echo $activePage == 'pokedex' ? 'active' : '' ?>" href="pokedex.php">Pokédex</a>
                     </li>
                     <?php if (isset($userData)) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="favorites.php">Favourites</a>
+                        <a class="nav-link <?php echo $activePage == 'favorites' ? 'active' : '' ?>" href="favorites.php">Favourites</a>
                     </li>
                     <?php } ?>
+                    <li class="nav-item">
+                        <a class="nav-link <?php echo $activePage == 'contact' ? 'active' : '' ?>" href="contact.php">Contact us</a>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
                     <?php if (isset($userData)) { ?>
                         <li class="nav-item">
-                            Welcome, <?php echo $userData->data->username ?><a class="nav-link" href="logout.php" style="display: inline; padding: 0; font-size: 85%;">(Log out)</a>
+                            <p style="margin-top: 1rem;";>Welcome, <?php echo $userData->data->username ?><a class="nav-link" href="logout.php" style="display: inline; padding: 0; font-size: 85%;">(Log out)</a></p>
+                        </li>
+                        <li class="nav-item">
+                            <a href="profile.php"><img class="nav-link <?php echo $activePage == 'profile' ? 'profile-highlight' : '' ?>" src="<?php echo get_gravatar($currentUserEmail, 40); ?>"></a>
                         </li>
                     <?php } else { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Login</a>
+                        <a class="nav-link <?php echo $activePage == 'login' ? 'active' : '' ?>" href="login.php">Login</a>
                     </li>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="register.php">Register</a>
+                        <a class="nav-link <?php echo $activePage == 'register' ? 'active' : '' ?>" href="register.php">Register</a>
                     </li>
                     <?php } ?>
                 </ul>

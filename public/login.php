@@ -2,6 +2,11 @@
 
 require_once __DIR__ .'/../src/config.php'; 
 require_once LIB_PATH . "/MyPokémonUserDatabase.php";
+require_once INC_PATH . "/userData.php";
+
+if (isset($userData)) {
+    header('Location:index.php');
+}
 
 if (isset($_GET['s']) || isset($_GET['error'])) {
     session_start();
@@ -50,6 +55,7 @@ require_once INC_PATH . "/head.php";
 ?>
 <body>
     <?php
+    $activePage = 'login';
     require_once INC_PATH . "/header.php";
     ?>
     <div class="container">

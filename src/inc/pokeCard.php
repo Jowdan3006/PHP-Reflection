@@ -1,4 +1,4 @@
-<div class="card" id="pokeCard0" style="width: 450px; margin: auto;">
+<div class="card" id="pokeCard0">
     <p class="favorite-count"><?php echo $db->getCountFavoritePokemon($pokemon->getId(), false) ?: 0 ?></p>
     <?php if (isset($userData)) {
         if ($pokemonIdArray && in_array($pokemon->getId(), $pokemonIdArray)) {
@@ -7,8 +7,8 @@
             echo '<i class="poke-fav far fa-star"></i>';
         }
     } ?>
-    <div style="padding: 25px">
-        <img class="card-img-top" max-height="350px" src="<?php echo $pokemon->getImage(); ?>" alt="Card image cap">
+    <div class="card-img-top">
+        <img src="<?php echo $pokemon->getImage(); ?>" alt="Card image cap">
     </div>
     <div class="card-body">
         <h5 class="card-title" style="margin-left: 15px;"><?php echo $pokemon->getName(); ?></h5>

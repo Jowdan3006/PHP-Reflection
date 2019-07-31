@@ -1,4 +1,4 @@
-<div class="card" style="max-width: 350px">
+<div class="card">
     <p class="favorite-count"><?php echo $db->getCountFavoritePokemon($pokemon->getId($id), false) ?: 0 ?></p>
     <?php if (isset($userData)) {
         if ($pokemonIdArray && in_array($pokemon->getId($id), $pokemonIdArray)) {
@@ -7,8 +7,8 @@
             echo '<i class="poke-fav far fa-star" data-poke-array-index="'.$id.'"></i>';
         }
     } ?>
-    <div style="padding: 25px">
-        <img class="card-img-top" src="<?php echo $pokemon->getImage($id); ?>" alt="Card image cap">
+    <div class="card-img-top">
+        <img src="<?php echo $pokemon->getImage($id); ?>" alt="Card image cap">
     </div>
     <div class="card-body">
         <h5 class="card-title" style="margin-left: 15px;"><?php echo $pokemon->getName($id); ?></h5>
@@ -24,13 +24,13 @@
                     echo '<div class="carousel-item">'; 
                 }
                     echo '<p class="d-block w-100" style="padding: 0 15px;">'.$flavorValue['text'].'</p>';
-                    echo '<p class="d-block w-100" style="padding: 0 15px;"> From: ';
+                    echo '<p class="d-block w-100" style="padding: 0 15px;">';
                     if (count($flavorValue['version']) > 1) {
                         foreach ($flavorValue['version'] as $version) {
-                            echo '<span class="badge">'.$version.'</span>';
+                            echo '<span class="badge badge-pill version-'.$version.'">'.$version.'</span>';
                         }
                     }else {
-                        echo '<span class="badge">'.$flavorValue['version'][0].'</span>';
+                        echo '<span class="badge badge-pill version-'.$flavorValue['version'][0].'">'.$flavorValue['version'][0].'</span>';
                     }
                     echo '</p>';
                 echo '</div>';

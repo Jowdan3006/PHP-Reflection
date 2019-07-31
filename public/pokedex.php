@@ -7,11 +7,11 @@ require LIB_PATH . "/MyPokémonUserDatabase.php";
 require LIB_PATH . "/PokeAPI.php";
 
 session_start();
-// if (isset($_SESSION['pokemonList'])) {
-//     $pokemonList == $_SESSION['pokemonList'];
-// } else {
-//     $pokemonList = new PokeAPI(null, 'list');
-// }
+if (isset($_SESSION['pokemonList'])) {
+    $pokemonList = $_SESSION['pokemonList'];
+} else {
+    $pokemonList = new PokeAPI(null, 'list');
+}
 
 $db = new MyPokémonUserDatabase;
 $db->create();
@@ -20,35 +20,38 @@ if (isset($userData)) {
     $pokemonIdArray = $db->getFavoritePokemon($currentUserId);
 }
 
+$pokeTypes = ['normal', 'fighting', 'flying', 'poison', 
+            'ground', 'rock', 'bug', 'ghost', 'steel', 
+            'fire', 'water', 'grass', 'electric', 'psychic', 
+            'ice', 'dragon', 'dark', 'fairy'];
 $message = '';
 $filter = '';
 $limit = 3;
 if (isset($_GET['o'])) {
-    $offset = $_GET['o'];
+    $offset = $_GET['o'] - 1;
 } else {
     $offset = 0;
 }
-$offsetLimit = $offset + $limit;
 
 if (isset($_GET['s']) && (isset($_GET['filter']))) {
     $search = $_GET['s'];
     $filter = $_GET['filter'];
 
     if (isset($_SESSION['pokemon']) && ($filter == 'ran' || $filter == 'type') && !empty($search) && 
-        $_SESSION['pokemon']->getType() == $search && isset($_SESSION['filter']) && $_SESSION['filter'] == $filter) {
+        $_SESSION['pokemon']->getType() == $search && isset($_SESSION['filter']) && $_SESSION['filter'] == $filter && $search != 'null') {
         $pokemon = $_SESSION['pokemon'];
         if ($filter == 'ran') {
             $pokemon->randomPokemon();
         }
     }
-    if (!($filter == 'type' && empty($search))) {
+    if (!($filter == 'type' && empty($search)) || $search == 'null') {
         $pokemon = new PokeAPI($search, $filter);
 
         $_SESSION['filter'] = $filter;
         $_SESSION['pokemon'] = $pokemon;
     }
 
-        if (!isset($pokemon)) {
+        if (!isset($pokemon) || ($search == 'null' && $filter != 'ran')) {
             $message = 'Please search for a Pokémon type.';
         } else if (!$pokemon->getPokemon() && $filter == 'type') {
             $message = 'No Pokémon found with type of "'.$search.'".';
@@ -63,6 +66,7 @@ if (isset($_GET['s']) && (isset($_GET['filter']))) {
 
     <body>
         <?php
+        $activePage = 'pokedex';
         require_once INC_PATH . "/header.php";
         ?>
         <div class="container">
@@ -82,9 +86,50 @@ if (isset($_GET['s']) && (isset($_GET['filter']))) {
                 </div>
             </div>
             <div class="form-inline justify-content-center">
-                <input class="form-control mr-sm-2" style="min-width: 250px" type="search" placeholder="Enter Pokémon name or ID" aria-label="Search" name="s"
-                    <?php echo (!empty($search)) ? 'value="'.$search.'"' : '' ?>
-                >
+                <span id="pokedex-search-box">
+                    <div class="dropdown-menu"></div>
+                    <?php if ($filter == 'nid' || $filter == '') { ?>
+                    <input class="form-control mr-sm-2" autocomplete="off" id="form-nameOrID" style="min-width: 250px" type="search" placeholder="Enter a Pokémon <?php echo $filter == 'type' ? 'type' : 'name or ID' ?> " aria-label="Search" name="s"
+                        <?php echo (!empty($search)) ? 'value="'.$search.'"' : '' ?>
+                    >
+                    <?php } else if ($filter == 'type') { ?>
+                        <div class="input-group type-select mr-sm-2">
+                            <select class="custom-select" id="select-type" name="s">
+                                <?php if (empty($search)) {
+                                    echo '<option value="null" selected>Choose Type</option>';
+                                } else {
+                                    echo '<option value="null">Choose Type</option>';
+                                }
+                                foreach ($pokeTypes as $type) {
+                                    if ($type == $search) {
+                                        echo '<option value="'.$type.'" selected>'.ucfirst($type).'</option>';
+                                    } else {
+                                        echo '<option value="'.$type.'">'.ucfirst($type).'</option>';
+                                    }
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    <?php } else if ($filter == 'ran') { ?>
+                        <div class="input-group random-select mr-sm-2">
+                            <select class="custom-select" id="select-random" name="s">
+                            <?php if (empty($search)) {
+                                    echo '<option value="null" selected>Random</option>';
+                                } else {
+                                    echo '<option value="null">Random</option>';
+                                }
+                                foreach ($pokeTypes as $type) {
+                                    if ($type == $search) {
+                                        echo '<option value="'.$type.'" selected>'.ucfirst($type).'</option>';
+                                    } else {
+                                        echo '<option value="'.$type.'">'.ucfirst($type).'</option>';
+                                    }
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    <?php } ?>
+                </span>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </div>
             </form>
@@ -96,18 +141,22 @@ if (isset($_GET['s']) && (isset($_GET['filter']))) {
                 $pokeCount = count($pokemon->getPokemon());
                 $pages = ceil($pokeCount / $limit);
                 echo '<div style="display: flex; flex-wrap: wrap;" class="pagination '.$pokemon->getType().'" >';
-                for ($i = 0; $i < $pages; $i++) {
+                for ($i = 1; $i <= $pages; $i++) {
                     $url = "pokedex.php?filter=$filter&s=$search&o=$i";
-                    echo '<a href="'.$url.'" class="btn btn-primary btn-sm" role="button">'.$i.'</a>';
+                    if ($i == ($offset + 1)) {
+                        echo '<a href="'.$url.'" class="btn btn-primary btn-sm disabled" role="button">'.$i.'</a>';
+                    } else {
+                        echo '<a href="'.$url.'" class="btn btn-primary btn-sm" role="button">'.$i.'</a>';
+                    }
                 }
                 echo '</div>';
                 echo '<div class="card-deck" id="pokeCards">';
                 $count = 0;
                 $id = ($offset * $limit) + $count;
-                while ($count < $limit && $id < ($pokeCount - 1)) {
-                    $id = ($offset * $limit) + $count;
+                while ($count < $limit && $id < $pokeCount) {
                     include INC_PATH . "/pokeCards.php";
                     $count++;
+                    $id = ($offset * $limit) + $count;
                 }
                 echo "</div>";
             } else {
@@ -123,6 +172,7 @@ if (isset($_GET['s']) && (isset($_GET['filter']))) {
         </div>
         <?php
         require_once INC_PATH . "/footer.php";
+        echo "<script src='". JS_PATH . "/pokedex.js"."'></script>";
         ?>
     </body>
 </html>
