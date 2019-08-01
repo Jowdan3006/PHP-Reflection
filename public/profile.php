@@ -52,13 +52,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                     <div class="profile-thumbnails d-flex <?php echo $profileImage ? '' : 'overlay-grey' ?>">
                         <?php
-                        foreach($pokemonIdArray as $pokeId) {
-                            echo "<div class='profile-thumb img-thumbnail'><img data-pokeId='".$pokeId."' src='". $pokemonList->getImage($pokeId)."'/></div>";
+                        if (!empty($pokemonIdArray)) {
+                            foreach($pokemonIdArray as $pokeId) {
+                                echo "<div class='profile-thumb img-thumbnail'><img data-pokeId='".$pokeId."' src='". $pokemonList->getImage($pokeId)."'/></div>";
+                            }
+                        } else {
+                            echo "<p><small><br>You must favorite some Pokemon to use them as a profile image.</small></p>";
                         }
                         ?>
                     </div>
                     <input id="pokeId" name="pokeId" value="<?php echo $profile['pokemon_id'] ? $profile['pokemon_id'] : 'null' ?>" hidden>
-                    <button style="position: absolute; bottom: 0;" type="submit" class="btn btn-primary">Apply changes</button>
+                    <button type="submit" class="btn btn-primary">Apply changes</button>
                 </form>
             </div>
         </div>

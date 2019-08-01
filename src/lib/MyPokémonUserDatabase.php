@@ -293,8 +293,8 @@ class MyPokémonUserDatabase
         );
 
         $jwt = JWT::encode($token, getenv("SECRET_PASSWORD"), 'HS256');
-        setcookie("user", $jwt, $expire, '/', 'localhost', FALSE, TRUE);
-        setcookie("logged", 'true', time() + 7200 , '/', 'localhost', FALSE, TRUE);
+        setcookie("user", $jwt, $expire, '/', getenv("MY_DB_HOST"), FALSE, TRUE);
+        setcookie("logged", 'true', time() + 7200 , '/', getenv("MY_DB_HOST"), FALSE, TRUE);
     }
 
     public function favoritePokemon($user, $pokemonId)

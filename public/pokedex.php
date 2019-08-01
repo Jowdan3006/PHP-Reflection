@@ -22,8 +22,8 @@ if (isset($_GET['o'])) {
 }
 
 if (isset($_GET['s']) && (isset($_GET['filter']))) {
-    $search = $_GET['s'];
-    $filter = $_GET['filter'];
+    $search = strtolower(filter_input(INPUT_GET, 's', FILTER_SANITIZE_STRING));
+    $filter = filter_input(INPUT_GET, 'filter', FILTER_SANITIZE_STRING);
 
     if (isset($_SESSION['pokemon']) && ($filter == 'ran' || $filter == 'type') && !empty($search) && 
         $_SESSION['pokemon']->getType() == $search && isset($_SESSION['filter']) && $_SESSION['filter'] == $filter && $search != 'null') {
@@ -49,7 +49,6 @@ if (isset($_GET['s']) && (isset($_GET['filter']))) {
 } else {
     unset($_SESSION['pokemon']);
 }
-
 ?>
 
     <body>
@@ -128,13 +127,13 @@ if (isset($_GET['s']) && (isset($_GET['filter']))) {
             if (is_array($pokemon->getPokemon())) {
                 $pokeCount = count($pokemon->getPokemon());
                 $pages = ceil($pokeCount / $limit);
-                echo '<div style="display: flex; flex-wrap: wrap;" class="pagination '.$pokemon->getType().'" >';
+                echo '<div class="pagination '.$pokemon->getType().'" >';
                 for ($i = 1; $i <= $pages; $i++) {
                     $url = "pokedex.php?filter=$filter&s=$search&o=$i";
                     if ($i == ($offset + 1)) {
-                        echo '<a href="'.$url.'" class="btn btn-primary btn-sm disabled" role="button">'.$i.'</a>';
+                        echo '<a href="'.$url.'" class="btn btn-sm disabled" role="button">'.$i.'</a>';
                     } else {
-                        echo '<a href="'.$url.'" class="btn btn-primary btn-sm" role="button">'.$i.'</a>';
+                        echo '<a href="'.$url.'" class="btn btn-sm" role="button">'.$i.'</a>';
                     }
                 }
                 echo '</div>';

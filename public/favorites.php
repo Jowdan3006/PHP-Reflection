@@ -45,10 +45,10 @@ if (!empty($pokemonIdArray)) {
                     $pokeCount = count($pokemon->getPokemon());
                     if ($pokeCount > $limit) {
                         $pages = ceil($pokeCount / $limit);
-                        echo '<div style="display: flex; flex-wrap: wrap;" class="pagination '.$pokemon->getType().'" >';
+                        echo '<div class="pagination '.$pokemon->getType().'" >';
                         for ($i = 0; $i < $pages; $i++) {
                             $url = "favorites.php?o=$i";
-                            echo '<a href="'.$url.'" class="btn btn-primary btn-sm" role="button">'.($i + 1).'</a>';
+                            echo '<a href="'.$url.'" class="btn btn-sm" role="button">'.($i + 1).'</a>';
                         }
                         echo '</div>';
                     }
@@ -62,7 +62,7 @@ if (!empty($pokemonIdArray)) {
                     }
                     echo "</div>";
             } else {
-                echo '<p style="text-align: center;">';
+                echo '<p class="error-message">';
                 echo $message;
                 echo '</p>';
             }

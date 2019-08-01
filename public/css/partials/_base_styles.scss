@@ -1,0 +1,346 @@
+/*
+    Pokemon version tags
+*/
+
+$pokemonGames: (
+    'yellow'    : #EBAC00,
+    'red'       : #AD322B,
+    'blue'      : #2C3BA0,
+    'gold'      : #D4AF37,
+    'silver'    : #C0C0C0,
+    'crystal'   : #9B6EA5,
+    'ruby'      : #9b111e,
+    'sapphire'  : #0f52ba,
+    'firered'   : #F62817,
+    'leafgreen' : #526b2d,
+    'emerald'   : #50C878,
+    'diamond'   : #b9f2ff,
+    'pearl'     : #eae0c8,
+    'platinum'  : #e5e4e2,
+    'heartgold' : darken(#D4AF37, 5%),
+    'soulsilver': darken(#C0C0C0, 5%),
+    'black'     : #1d1d1d,
+    'white'     : #f0f0f0,
+    'black-2'   : #1d1d1d,
+    'white-2'   : #f0f0f0,
+    'x'         : #0D5A8B,
+    'y'         : #B32C3E,
+    'omega-ruby': darken(#9b111e, 5%),
+    'alpha-sapphire' : darken(#0f52ba, 5%),
+    'sun'       : #FDB813,
+    'moon'      : #F5F3CE,
+    'ultra-sun' : darken(#FDB813, 5%),
+    'ultra-moon': darken(#F5F3CE, 5%),
+);
+
+@each $game, $color in $pokemonGames {
+    .version-#{$game} {
+        background-color: $color;
+        color: darken($color, 50%);
+    }
+}
+
+.badge-pill {
+    margin-right: 2px;
+    text-indent: 1px;
+    line-height: 1.25;
+}
+
+/*
+    Pokedex form styling 
+*/
+
+.dropdown-menu {
+    width: 100%;
+}
+
+#pokedex-search-box {
+    position: relative;
+}
+
+.btn-outline-success {
+    margin-left: 1rem;
+}
+
+.form-control {
+    margin: 0!important;
+}
+
+.custom-select option{
+    text-transform: capitalize;
+}
+
+/*
+    Global Styling
+*/
+
+img {
+    max-width: 320px;
+    max-height: 320px;
+    width: auto;
+    margin: auto;
+}
+
+.error-message {
+    text-align: center;
+}
+
+.alert {
+    width: 500px;
+    margin: auto; 
+    margin-top: 25px;
+}
+
+/*
+    Header Styling
+*/
+a[href = "profile.php"] {
+    padding: 0!important;
+    text-align: center;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+#headerAlert {
+    position: fixed;
+    top: 80px;
+    z-index: 1000;
+    div {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+.nav-item {
+    .img-thumbnail {
+        width: 56px;
+        height: 56px;
+        margin-left: 1rem;
+    }
+
+    p {
+        margin-top: 1rem;
+        .nav-link {
+            display: inline; 
+            padding: 0!important; 
+            font-size: 85%;
+        }
+    }
+}
+
+.navbar {
+    margin-bottom: 1rem;
+}
+
+.profile-image-header{
+    max-height: 48px;
+    max-width: 48px;
+    margin-left: -4px;
+}
+
+.profile-highlight {
+    box-shadow: inset 0 0 3px 1px rgba(33,33,33,0.5);
+}
+
+@media only screen and (max-width: 992px){
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+/* 
+    Profile Styling 
+*/
+
+.profile-thumb {
+    width: 58px;
+    height: 58px;
+    margin: 1px;
+    text-align: center;
+    &:hover {
+        border-color: #999999;
+        cursor: pointer;
+    }
+
+    img {
+        max-height: 45px;
+        max-width: 45px;
+        display: inline-block;
+    }
+}
+
+.profile-thumb:before,
+.profile-picture:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0%;
+    vertical-align: middle;
+}
+
+.profile-thumbnails {
+    max-width: 320px;
+    flex-wrap: wrap;
+}
+
+.profile-picture {
+    width: 335px;
+    height: 335px;
+    float: right;
+    text-align: center;
+
+    .profile-picture img {
+        max-width: 320px;
+        max-height: 320px;
+    }
+}
+
+form[action = "profile.php"] button {
+    position: absolute; 
+    bottom: 0;
+}
+
+.overlay-grey img{
+    filter: grayscale(75%);
+}
+
+/*
+    Card styling 
+*/
+
+.pagination {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.pagination.type a{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    background-color: rgba(222, 222, 222, 0.5);
+    &:hover {
+        background-color: rgba(222, 222, 222, 0.6);
+    }
+}
+
+.card-img-top {
+    width: auto;
+    text-align: center;
+    padding: 1rem;
+    height: 350px;
+
+    img {
+        max-width: 310px;
+        max-height: 310px;
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.card {
+    max-width: 370px;
+    width: auto;
+    margin: auto;
+    margin-top: 12px;
+    height: 650px;
+    .btn {
+        font-weight: 900;
+        color: #333;
+        position: absolute;
+        bottom: 15px;
+        left: 35px;
+        border: 1px solid #ccc;
+        -webkit-text-stroke: 0.25px #dedede;
+    }
+}
+
+.card-title {
+    margin-left: 15px;
+    text-transform: capitalize;
+}
+
+.card-body {
+    overflow: hidden;
+}
+
+.poke-fav {
+    font-size: 2rem;
+    position: absolute;
+    right: 4px;
+    top: 6px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.favorite-count {
+    color: #333333;
+    background-color: rgba(#dedede, 0.5);
+    text-align: center;
+    font-size: 1.25rem;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    border-radius: 50% 0 50% 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 1.9;
+    text-indent: 2px;
+    &.with-icon {
+        border-radius: 50px 0 0 50px;
+        width: 5rem;
+        text-align: left;
+        text-indent: 1rem;
+    }
+    &::before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.fas {
+    color: grey;
+    &.fa-star {
+        color: gold;
+        &:hover {
+            color: darken(gold, 2%);
+        }
+    }
+}
+
+.far {
+    color: grey;
+    &:hover {
+        color: gold;
+    }
+}
+
+
+.carousel-control-next {
+    right: -35px;
+}
+
+.carousel-control-prev {
+    left: -35px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: 175px;
+    background-color: #dedede;
+    border-radius: 25px;
+    max-width: 40px;
+}

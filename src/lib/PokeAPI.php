@@ -95,6 +95,39 @@ class PokeAPI
         return $this->pokemon;
     }
 
+    public function getPokemonType($id = false) {
+        if ($id) {
+            if (isset($this->pokemon[$id]->types)){
+                foreach ($this->pokemon[$id]->types as $type) {
+                    $types[] = $type->type->name;
+                }
+                return $types;
+            } else {
+                $this->setPokemon($id);
+                foreach ($this->pokemon[$id]->types as $type) {
+                    $types[] = $type->type->name;
+                }
+                return $types;
+            }
+        } else {
+            foreach ($this->pokemon->types as $type) {
+                $types[] = $type->type->name;
+            }
+            return $types;
+        }
+    }
+
+    private function setPokemon($id) {
+        $pokeapi = new \GuzzleHttp\Client();
+        try {
+            $pokemon = $pokeapi->request('GET', 'https://pokeapi.co/api/v2/pokemon/'.$id);
+            $pokemon = json_decode($pokemon->getBody());
+        } catch (Exception $e) {
+            return false;
+        }
+        $this->pokemon[$id] = $pokemon;
+    }
+
     public function getRandomPokemonFull()
     {
         return $this->randomPokemonFull;        
@@ -125,11 +158,36 @@ class PokeAPI
             }
         } catch (Exception $e) {}
         try {
+            $response = $imgTest->request('GET', "https://img.pokemondb.net/artwork/".$this->getName($id)."-mane.jpg");
+            if ($response->getStatusCode() == 200) {
+                return "https://img.pokemondb.net/artwork/".$this->getName($id)."-mane.jpg";
+            }
+        } catch (Exception $e) {}
+            try {
+                $response = $imgTest->request('GET', "https://img.pokemondb.net/artwork/".$this->getName($id)."-wings.jpg");
+                if ($response->getStatusCode() == 200) {
+                    return "https://img.pokemondb.net/artwork/".$this->getName($id)."-wings.jpg";
+                }
+            } catch (Exception $e) {}
+        try {
+            $response = $imgTest->request('GET', "https://img.pokemondb.net/artwork/vector/".$this->getName($id)."-core.png");
+            if ($response->getStatusCode() == 200) {
+                return "https://img.pokemondb.net/artwork/vector/".$this->getName($id)."-core.png";
+            }
+        } catch (Exception $e) {}
+        try {
+            $response = $imgTest->request('GET', "https://img.pokemondb.net/artwork/large/".substr($this->getName($id), 0, 6)."-core.jpg");
+            if ($response->getStatusCode() == 200) {
+                return "https://img.pokemondb.net/artwork/large/".substr($this->getName($id), 0, 6)."-core.jpg";                
+            }
+        } catch (Exception $e) {}
+        try {
             $response = $imgTest->request('GET', "https://img.pokemondb.net/artwork/vector/".$this->getName($id).".png");
             if ($response->getStatusCode() == 200) {
                 return "https://img.pokemondb.net/artwork/vector/".$this->getName($id).".png";
             }
         } catch (Exception $e) {}
+
     }
 
     private function arrangePokemon() 
@@ -139,7 +197,17 @@ class PokeAPI
         if (count($this->pokemon) > 400) {
             foreach ($this->pokemon as $pokemon) {
                 $id = substr($pokemon->url, 34, -1);
-                if (strpos($pokemon->name, 'totem') || strpos($pokemon->name, '-battle-bond') || strpos($pokemon->name, '-cosplay')) {
+                if (strpos($pokemon->name, 'totem') || strpos($pokemon->name, '-battle-bond') || strpos($pokemon->name, '-cosplay')
+                || strpos($pokemon->name, '-meteor') || strpos($pokemon->name, 'minior-')){
+                    if ($pokemon->name == 'minior-red') {
+                        $pokeName[$id] = ['name' => 'minior-core' . '-core', 'url' => $pokemon->url, 'id' => $id];
+                        $this->speciesArray[] = $count;
+                        $count++;
+                    } else if (strpos($pokemon->name, 'minior-')) {
+                        $pokeName[$id] = ['name' => $pokemon->name . '-core', 'url' => $pokemon->url, 'id' => $id];
+                        $this->speciesArray[] = $count;
+                        $count++;
+                    }
                 } else {
                     $pokeName[$id] = ['name' => $pokemon->name, 'url' => $pokemon->url, 'id' => $id];
                     $this->speciesArray[] = $count;
@@ -147,15 +215,25 @@ class PokeAPI
                 }
             }
         } else {
-        foreach ($this->pokemon as $pokemon) {
-            $id = substr($pokemon->pokemon->url, 34, -1);
-            if (strpos($pokemon->pokemon->name, 'totem') || strpos($pokemon->pokemon->name, '-battle-bond') || strpos($pokemon->pokemon->name, '-cosplay')) {
-            } else {
-                $pokeName[] = ['name' => $pokemon->pokemon->name, 'url' => $pokemon->pokemon->url, 'id' => $id];
-                $this->speciesArray[] = $count;
-                $count++;
+            foreach ($this->pokemon as $pokemon) {
+                $id = substr($pokemon->pokemon->url, 34, -1);
+                if (strpos($pokemon->pokemon->name, 'totem') || strpos($pokemon->pokemon->name, '-battle-bond') || strpos($pokemon->pokemon->name, '-cosplay')
+                    || strpos($pokemon->pokemon->name, '-meteor') || strpos($pokemon->pokemon->name, 'minior-')){
+                        if ($pokemon->pokemon->name == 'minior-red') {
+                            $pokeName[] = ['name' => 'minior-core' . '-core', 'url' => $pokemon->pokemon->url, 'id' => $id];
+                            $this->speciesArray[] = $count;
+                            $count++;
+                        } else if (strpos($pokemon->pokemon->name, 'minior-')) {
+                            $pokeName[] = ['name' => $pokemon->pokemon->name . '-core', 'url' => $pokemon->pokemon->url, 'id' => $id];
+                            $this->speciesArray[] = $count;
+                            $count++;
+                        }
+                } else {
+                    $pokeName[] = ['name' => $pokemon->pokemon->name, 'url' => $pokemon->pokemon->url, 'id' => $id];
+                    $this->speciesArray[] = $count;
+                    $count++;
+                }
             }
-        }
         }
         $this->pokemon = $pokeName;
     }

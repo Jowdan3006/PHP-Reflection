@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 1rem;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <?php 
             if (isset($expiredSession) && $expiredSession && isset($_COOKIE['logged'])) { 
@@ -39,7 +39,7 @@
                 <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
                     <?php if (isset($userData)) { ?>
                         <li class="nav-item">
-                            <p style="margin-top: 1rem;";>Welcome, <?php echo $userData->data->username ?><a class="nav-link" href="logout.php" style="display: inline; padding: 0; font-size: 85%;">(Log out)</a></p>
+                            <p>Welcome, <?php echo $userData->data->username ?><a class="nav-link" href="logout.php">(Log out)</a></p>
                         </li>
                         <li class="nav-item">
                             <a href="profile.php" class="nav-link img-thumbnail <?php echo $activePage == 'profile' ? 'profile-highlight' : '' ?>">

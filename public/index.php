@@ -63,7 +63,7 @@ if (!empty($pokemonTopArray)) {
                     }
                     echo "</div>";
             } else {
-                echo '<p style="text-align: center;">';
+                echo '<p class="error-message">';
                 echo $message;
                 echo '</p>';
             }

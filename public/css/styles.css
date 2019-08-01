@@ -1,216 +1,3843 @@
-.version-black, .version-black-2 {
-    background-color: #1d1d1d;
-    color: #dfdfdf;
-}
-.version-white, .version-white-2 {
-    background-color: #f0f0f0;
-}
-.version-silver {
-    background-color: #C0C0C0;
-}
-.version-soulsilver {
-    background-color: #a3a3a3;
-}
-.version-gold {
-    background-color: #D4AF37;
-}
-.version-heartgold {
-    background-color: #b1932f;
-}
-.version-sapphire {
-    background-color: #0f52ba;
-}
-.version-alpha-sapphire {
-    background-color: #0f4aa1;
-    color: #dfdfdf;
-}
-.version-ruby {
-    background-color: #9b111e;
-}
-.version-omega-ruby {
-    background-color: #83131e;
-    color: #dfdfdf;
-}
-.version-emerald {
-    background-color: #50C878;
-}
-.version-moon {
-    background-color: #F5F3CE;
-}
-.version-sun {
-    background-color: #FDB813;
-}
-.version-ultra-sun {
-    background-color: #d39a15;
-}
-.version-platinum {
-    background-color: #e5e4e2;
-}
-.version-pearl {
-    background-color: #eae0c8;
-}
-.version-diamond {
-    background-color: #b9f2ff;
-}
-.version-leafgreen {
-    background-color: #526b2d;
-}
-.version-firered {
-    background-color: #F62817;
-}
-.version-x {
-    background-color: #0D5A8B;
-    color: #dfdfdf;
-}
-.version-y {
-    background-color: #B32C3E;
-    color: #dfdfdf;
-}
-.version-blue {
-    background-color: #2C3BA0;
-}
+/*
+    Pokemon version tags
+*/
 .version-yellow {
-    background-color: #EBAC00;
-}
-.version-red {
-    background-color: #AD322B;
-}
-.version-crystal {
-    background-color: #9B6EA5;
+  background-color: #EBAC00;
+  color: black;
 }
 
+.version-red {
+  background-color: #AD322B;
+  color: black;
+}
+
+.version-blue {
+  background-color: #2C3BA0;
+  color: black;
+}
+
+.version-gold {
+  background-color: #D4AF37;
+  color: #0a0802;
+}
+
+.version-silver {
+  background-color: #C0C0C0;
+  color: #414141;
+}
+
+.version-crystal {
+  background-color: #9B6EA5;
+  color: #0b080c;
+}
+
+.version-ruby {
+  background-color: #9b111e;
+  color: black;
+}
+
+.version-sapphire {
+  background-color: #0f52ba;
+  color: black;
+}
+
+.version-firered {
+  background-color: #F62817;
+  color: #0d0201;
+}
+
+.version-leafgreen {
+  background-color: #526b2d;
+  color: black;
+}
+
+.version-emerald {
+  background-color: #50C878;
+  color: #06130a;
+}
+
+.version-diamond {
+  background-color: #b9f2ff;
+  color: #0097b9;
+}
+
+.version-pearl {
+  background-color: #eae0c8;
+  color: #826a31;
+}
+
+.version-platinum {
+  background-color: #e5e4e2;
+  color: #69665f;
+}
+
+.version-heartgold {
+  background-color: #c7a22b;
+  color: black;
+}
+
+.version-soulsilver {
+  background-color: #b3b3b3;
+  color: #343434;
+}
+
+.version-black {
+  background-color: #1d1d1d;
+  color: black;
+}
+
+.version-white {
+  background-color: #f0f0f0;
+  color: #717171;
+}
+
+.version-black-2 {
+  background-color: #1d1d1d;
+  color: black;
+}
+
+.version-white-2 {
+  background-color: #f0f0f0;
+  color: #717171;
+}
+
+.version-x {
+  background-color: #0D5A8B;
+  color: black;
+}
+
+.version-y {
+  background-color: #B32C3E;
+  color: black;
+}
+
+.version-omega-ruby {
+  background-color: #840e1a;
+  color: black;
+}
+
+.version-alpha-sapphire {
+  background-color: #0d48a2;
+  color: black;
+}
+
+.version-sun {
+  background-color: #FDB813;
+  color: #110c00;
+}
+
+.version-moon {
+  background-color: #F5F3CE;
+  color: #a39c21;
+}
+
+.version-ultra-sun {
+  background-color: #f4ad02;
+  color: black;
+}
+
+.version-ultra-moon {
+  background-color: #f1eeb9;
+  color: #8e881d;
+}
+
+.badge-pill {
+  margin-right: 2px;
+  text-indent: 1px;
+  line-height: 1.25;
+}
+
+/*
+    Pokedex form styling 
+*/
 .dropdown-menu {
-    width: 100%;
+  width: 100%;
 }
 
 #pokedex-search-box {
-    position: relative;
+  position: relative;
 }
 
 .btn-outline-success {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .form-control {
-    margin: 0!important;
+  margin: 0 !important;
 }
 
-.poke-fav {
-    font-size: 2rem;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-}
-.favorite-count {
-    color: #333333;
-    background-color: rgba(207, 189, 20, 0.5);
-    width: 1.25rem;
-    text-align: center;
-    border-radius: 50%;
-    line-height: 1;
-    margin: 0;
-    font-size: 1.25rem;
-    position: absolute;
-    right: 50px;
-    top: 6px;
+.custom-select option {
+  text-transform: capitalize;
 }
 
-.poke-fav:hover {
-    cursor: pointer;
+/*
+    Global Styling
+*/
+img {
+  max-width: 320px;
+  max-height: 320px;
+  width: auto;
+  margin: auto;
 }
-.fas {
-    color: gold;
+
+.error-message {
+  text-align: center;
 }
-.far {
-    color: grey;
+
+.alert {
+  width: 500px;
+  margin: auto;
+  margin-top: 25px;
 }
-.far:hover {
-    color: gold;
+
+/*
+    Header Styling
+*/
+a[href="profile.php"] {
+  padding: 0 !important;
+  text-align: center;
+}
+
+a[href="profile.php"]::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 #headerAlert {
-    position: fixed;
-    top: 80px;
-    z-index: 1000;
+  position: fixed;
+  top: 80px;
+  z-index: 1000;
 }
+
 #headerAlert div {
-    width: 50%;
-    margin: auto;
-}
-@media only screen and (max-width: 992px){
-    .navbar-nav {
-        text-align: center;
-    }
-}
-
-.custom-select option{
-    text-transform: capitalize;
-}
-
-
-
-img {
-    max-width: 320px;
-    max-height: 320px;
-    width: auto;
-    margin: auto;
-}
-
-.card-img-top {
-    width: auto;
-    margin: auto;
-    padding: 1rem;
-}
-
-.card {
-    max-width: 370px;
-    width: auto;
-    margin: auto;
-    height: 650px;
-}
-
-.profile-thumb {
-    width: 58px;
-    height: 58px;
-    margin: 1px;
-}
-
-.profile-thumb:hover {
-    border-color: #999999;
-    cursor: pointer;
-}
-
-.profile-thumb img {
-    max-height: 50px;
-    max-width: 50px;
-    margin: auto;
-}
-.profile-thumbnails {
-    max-width: 320px;
-    flex-wrap: wrap;
-}
-
-.profile-picture {
-    width: 330px;
-    height: 330px;
-    float: right;
-}
-
-.profile-image-header{
-    max-height: 40px;
-    max-width: 40px;
+  width: 50%;
+  margin: auto;
 }
 
 .nav-item .img-thumbnail {
-    width: 56px;
-    height: 56px;
-    margin-left: 1rem;
+  width: 56px;
+  height: 56px;
+  margin-left: 1rem;
+}
+
+.nav-item p {
+  margin-top: 1rem;
+}
+
+.nav-item p .nav-link {
+  display: inline;
+  padding: 0 !important;
+  font-size: 85%;
+}
+
+.navbar {
+  margin-bottom: 1rem;
+}
+
+.profile-image-header {
+  max-height: 48px;
+  max-width: 48px;
+  margin-left: -4px;
 }
 
 .profile-highlight {
-    box-shadow: inset 0 0 3px 1px rgba(33,33,33,0.5);
+  -webkit-box-shadow: inset 0 0 3px 1px rgba(33, 33, 33, 0.5);
+          box-shadow: inset 0 0 3px 1px rgba(33, 33, 33, 0.5);
 }
 
-.overlay-grey img{
-    filter: grayscale();
+@media only screen and (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
 }
+
+/* 
+    Profile Styling 
+*/
+.profile-thumb {
+  width: 58px;
+  height: 58px;
+  margin: 1px;
+  text-align: center;
+}
+
+.profile-thumb:hover {
+  border-color: #999999;
+  cursor: pointer;
+}
+
+.profile-thumb img {
+  max-height: 45px;
+  max-width: 45px;
+  display: inline-block;
+}
+
+.profile-thumb:before,
+.profile-picture:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0%;
+  vertical-align: middle;
+}
+
+.profile-thumbnails {
+  max-width: 320px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profile-picture {
+  width: 335px;
+  height: 335px;
+  float: right;
+  text-align: center;
+}
+
+.profile-picture .profile-picture img {
+  max-width: 320px;
+  max-height: 320px;
+}
+
+form[action="profile.php"] button {
+  position: absolute;
+  bottom: 0;
+}
+
+.overlay-grey img {
+  -webkit-filter: grayscale(75%);
+          filter: grayscale(75%);
+}
+
+/*
+    Card styling 
+*/
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pagination.type a {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  background-color: rgba(222, 222, 222, 0.5);
+}
+
+.pagination.type a:hover {
+  background-color: rgba(222, 222, 222, 0.6);
+}
+
+.card-img-top {
+  width: auto;
+  text-align: center;
+  padding: 1rem;
+  height: 350px;
+}
+
+.card-img-top img {
+  max-width: 310px;
+  max-height: 310px;
+}
+
+.card-img-top::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.card {
+  max-width: 370px;
+  width: auto;
+  margin: auto;
+  margin-top: 12px;
+  height: 650px;
+}
+
+.card .btn {
+  font-weight: 900;
+  color: #333;
+  position: absolute;
+  bottom: 15px;
+  left: 35px;
+  border: 1px solid #ccc;
+  -webkit-text-stroke: 0.25px #dedede;
+}
+
+.card-title {
+  margin-left: 15px;
+  text-transform: capitalize;
+}
+
+.card-body {
+  overflow: hidden;
+}
+
+.poke-fav {
+  font-size: 2rem;
+  position: absolute;
+  right: 4px;
+  top: 6px;
+}
+
+.poke-fav:hover {
+  cursor: pointer;
+}
+
+.favorite-count {
+  color: #333333;
+  background-color: rgba(222, 222, 222, 0.5);
+  text-align: center;
+  font-size: 1.25rem;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  border-radius: 50% 0 50% 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 1.9;
+  text-indent: 2px;
+}
+
+.favorite-count.with-icon {
+  border-radius: 50px 0 0 50px;
+  width: 5rem;
+  text-align: left;
+  text-indent: 1rem;
+}
+
+.favorite-count::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.fas {
+  color: grey;
+}
+
+.fas.fa-star {
+  color: gold;
+}
+
+.fas.fa-star:hover {
+  color: #f5ce00;
+}
+
+.far {
+  color: grey;
+}
+
+.far:hover {
+  color: gold;
+}
+
+.carousel-control-next {
+  right: -35px;
+}
+
+.carousel-control-prev {
+  left: -35px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  height: 175px;
+  background-color: #dedede;
+  border-radius: 25px;
+  max-width: 40px;
+}
+
+.type-normal {
+  background-color: #bcbc97;
+}
+
+.type-normal:hover {
+  background-color: #a8a878;
+}
+
+.type-normalnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #bcbc97));
+  background: linear-gradient(#bcbc97 50%, #bcbc97 50%);
+}
+
+.type-normalnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #b2b288 50%, #b2b288 50%);
+}
+
+.type-normalfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #f39d60));
+  background: linear-gradient(#bcbc97 50%, #f39d60 50%);
+}
+
+.type-normalfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #b2b288 50%, #f28f48 50%);
+}
+
+.type-normalwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #96b2f5));
+  background: linear-gradient(#bcbc97 50%, #96b2f5 50%);
+}
+
+.type-normalwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #b2b288 50%, #7fa1f2 50%);
+}
+
+.type-normalgrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #d9eccf));
+  background: linear-gradient(#bcbc97 50%, #d9eccf 50%);
+}
+
+.type-normalgrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #b2b288 50%, #cae5bc 50%);
+}
+
+.type-normalelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #fadb61));
+  background: linear-gradient(#bcbc97 50%, #fadb61 50%);
+}
+
+.type-normalelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #b2b288 50%, #f9d649 50%);
+}
+
+.type-normalice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #bde6e6));
+  background: linear-gradient(#bcbc97 50%, #bde6e6 50%);
+}
+
+.type-normalice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #b2b288 50%, #aadfdf 50%);
+}
+
+.type-normalground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #e9d292));
+  background: linear-gradient(#bcbc97 50%, #e9d292 50%);
+}
+
+.type-normalground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #b2b288 50%, #e4c97d 50%);
+}
+
+.type-normalflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#bcbc97 50%, #cbbdf6 50%);
+}
+
+.type-normalflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #b2b288 50%, #baa6f3 50%);
+}
+
+.type-normalpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #bc57bc));
+  background: linear-gradient(#bcbc97 50%, #bc57bc 50%);
+}
+
+.type-normalpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #b2b288 50%, #b247b2 50%);
+}
+
+.type-normalfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #d84b43));
+  background: linear-gradient(#bcbc97 50%, #d84b43 50%);
+}
+
+.type-normalfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #b2b288 50%, #d3372e 50%);
+}
+
+.type-normalpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #fa89ab));
+  background: linear-gradient(#bcbc97 50%, #fa89ab 50%);
+}
+
+.type-normalpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #b2b288 50%, #f97099 50%);
+}
+
+.type-normaldark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #8f705c));
+  background: linear-gradient(#bcbc97 50%, #8f705c 50%);
+}
+
+.type-normaldark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #b2b288 50%, #806452 50%);
+}
+
+.type-normalrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #ccb657));
+  background: linear-gradient(#bcbc97 50%, #ccb657 50%);
+}
+
+.type-normalrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #b2b288 50%, #c6ae44 50%);
+}
+
+.type-normalbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #c9db30));
+  background: linear-gradient(#bcbc97 50%, #c9db30 50%);
+}
+
+.type-normalbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #b2b288 50%, #bcce24 50%);
+}
+
+.type-normalghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #8a74af));
+  background: linear-gradient(#bcbc97 50%, #8a74af 50%);
+}
+
+.type-normalghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #b2b288 50%, #7d64a5 50%);
+}
+
+.type-normalsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#bcbc97 50%, #d7d7e4 50%);
+}
+
+.type-normalsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #b2b288 50%, #c7c7da 50%);
+}
+
+.type-normaldragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #9369fa));
+  background: linear-gradient(#bcbc97 50%, #9369fa 50%);
+}
+
+.type-normaldragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #b2b288 50%, #8251f9 50%);
+}
+
+.type-normalfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bcbc97), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#bcbc97 50%, #ffe1eb 50%);
+}
+
+.type-normalfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b2b288), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #b2b288 50%, #ffc8da 50%);
+}
+
+.type-fire {
+  background-color: #f39d60;
+}
+
+.type-fire:hover {
+  background-color: #f08030;
+}
+
+.type-firenormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #bcbc97));
+  background: linear-gradient(#f39d60 50%, #bcbc97 50%);
+}
+
+.type-firenormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #f28f48 50%, #b2b288 50%);
+}
+
+.type-firefire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #f39d60));
+  background: linear-gradient(#f39d60 50%, #f39d60 50%);
+}
+
+.type-firefire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #f28f48 50%, #f28f48 50%);
+}
+
+.type-firewater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #96b2f5));
+  background: linear-gradient(#f39d60 50%, #96b2f5 50%);
+}
+
+.type-firewater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #f28f48 50%, #7fa1f2 50%);
+}
+
+.type-firegrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #d9eccf));
+  background: linear-gradient(#f39d60 50%, #d9eccf 50%);
+}
+
+.type-firegrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #f28f48 50%, #cae5bc 50%);
+}
+
+.type-fireelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #fadb61));
+  background: linear-gradient(#f39d60 50%, #fadb61 50%);
+}
+
+.type-fireelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #f28f48 50%, #f9d649 50%);
+}
+
+.type-fireice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #bde6e6));
+  background: linear-gradient(#f39d60 50%, #bde6e6 50%);
+}
+
+.type-fireice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #f28f48 50%, #aadfdf 50%);
+}
+
+.type-fireground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #e9d292));
+  background: linear-gradient(#f39d60 50%, #e9d292 50%);
+}
+
+.type-fireground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #f28f48 50%, #e4c97d 50%);
+}
+
+.type-fireflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#f39d60 50%, #cbbdf6 50%);
+}
+
+.type-fireflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #f28f48 50%, #baa6f3 50%);
+}
+
+.type-firepoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #bc57bc));
+  background: linear-gradient(#f39d60 50%, #bc57bc 50%);
+}
+
+.type-firepoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #f28f48 50%, #b247b2 50%);
+}
+
+.type-firefighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #d84b43));
+  background: linear-gradient(#f39d60 50%, #d84b43 50%);
+}
+
+.type-firefighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #f28f48 50%, #d3372e 50%);
+}
+
+.type-firepsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #fa89ab));
+  background: linear-gradient(#f39d60 50%, #fa89ab 50%);
+}
+
+.type-firepsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #f28f48 50%, #f97099 50%);
+}
+
+.type-firedark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #8f705c));
+  background: linear-gradient(#f39d60 50%, #8f705c 50%);
+}
+
+.type-firedark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #f28f48 50%, #806452 50%);
+}
+
+.type-firerock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #ccb657));
+  background: linear-gradient(#f39d60 50%, #ccb657 50%);
+}
+
+.type-firerock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #f28f48 50%, #c6ae44 50%);
+}
+
+.type-firebug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #c9db30));
+  background: linear-gradient(#f39d60 50%, #c9db30 50%);
+}
+
+.type-firebug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #f28f48 50%, #bcce24 50%);
+}
+
+.type-fireghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #8a74af));
+  background: linear-gradient(#f39d60 50%, #8a74af 50%);
+}
+
+.type-fireghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #f28f48 50%, #7d64a5 50%);
+}
+
+.type-firesteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#f39d60 50%, #d7d7e4 50%);
+}
+
+.type-firesteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #f28f48 50%, #c7c7da 50%);
+}
+
+.type-firedragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #9369fa));
+  background: linear-gradient(#f39d60 50%, #9369fa 50%);
+}
+
+.type-firedragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #f28f48 50%, #8251f9 50%);
+}
+
+.type-firefairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f39d60), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#f39d60 50%, #ffe1eb 50%);
+}
+
+.type-firefairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f28f48), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #f28f48 50%, #ffc8da 50%);
+}
+
+.type-water {
+  background-color: #96b2f5;
+}
+
+.type-water:hover {
+  background-color: #6890f0;
+}
+
+.type-waternormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #bcbc97));
+  background: linear-gradient(#96b2f5 50%, #bcbc97 50%);
+}
+
+.type-waternormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #7fa1f2 50%, #b2b288 50%);
+}
+
+.type-waterfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #f39d60));
+  background: linear-gradient(#96b2f5 50%, #f39d60 50%);
+}
+
+.type-waterfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #7fa1f2 50%, #f28f48 50%);
+}
+
+.type-waterwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #96b2f5));
+  background: linear-gradient(#96b2f5 50%, #96b2f5 50%);
+}
+
+.type-waterwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #7fa1f2 50%, #7fa1f2 50%);
+}
+
+.type-watergrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #d9eccf));
+  background: linear-gradient(#96b2f5 50%, #d9eccf 50%);
+}
+
+.type-watergrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #7fa1f2 50%, #cae5bc 50%);
+}
+
+.type-waterelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #fadb61));
+  background: linear-gradient(#96b2f5 50%, #fadb61 50%);
+}
+
+.type-waterelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #7fa1f2 50%, #f9d649 50%);
+}
+
+.type-waterice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #bde6e6));
+  background: linear-gradient(#96b2f5 50%, #bde6e6 50%);
+}
+
+.type-waterice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #7fa1f2 50%, #aadfdf 50%);
+}
+
+.type-waterground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #e9d292));
+  background: linear-gradient(#96b2f5 50%, #e9d292 50%);
+}
+
+.type-waterground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #7fa1f2 50%, #e4c97d 50%);
+}
+
+.type-waterflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#96b2f5 50%, #cbbdf6 50%);
+}
+
+.type-waterflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #7fa1f2 50%, #baa6f3 50%);
+}
+
+.type-waterpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #bc57bc));
+  background: linear-gradient(#96b2f5 50%, #bc57bc 50%);
+}
+
+.type-waterpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #7fa1f2 50%, #b247b2 50%);
+}
+
+.type-waterfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #d84b43));
+  background: linear-gradient(#96b2f5 50%, #d84b43 50%);
+}
+
+.type-waterfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #7fa1f2 50%, #d3372e 50%);
+}
+
+.type-waterpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #fa89ab));
+  background: linear-gradient(#96b2f5 50%, #fa89ab 50%);
+}
+
+.type-waterpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #7fa1f2 50%, #f97099 50%);
+}
+
+.type-waterdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #8f705c));
+  background: linear-gradient(#96b2f5 50%, #8f705c 50%);
+}
+
+.type-waterdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #7fa1f2 50%, #806452 50%);
+}
+
+.type-waterrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #ccb657));
+  background: linear-gradient(#96b2f5 50%, #ccb657 50%);
+}
+
+.type-waterrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #7fa1f2 50%, #c6ae44 50%);
+}
+
+.type-waterbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #c9db30));
+  background: linear-gradient(#96b2f5 50%, #c9db30 50%);
+}
+
+.type-waterbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #7fa1f2 50%, #bcce24 50%);
+}
+
+.type-waterghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #8a74af));
+  background: linear-gradient(#96b2f5 50%, #8a74af 50%);
+}
+
+.type-waterghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #7fa1f2 50%, #7d64a5 50%);
+}
+
+.type-watersteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#96b2f5 50%, #d7d7e4 50%);
+}
+
+.type-watersteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #7fa1f2 50%, #c7c7da 50%);
+}
+
+.type-waterdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #9369fa));
+  background: linear-gradient(#96b2f5 50%, #9369fa 50%);
+}
+
+.type-waterdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #7fa1f2 50%, #8251f9 50%);
+}
+
+.type-waterfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #96b2f5), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#96b2f5 50%, #ffe1eb 50%);
+}
+
+.type-waterfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7fa1f2), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #7fa1f2 50%, #ffc8da 50%);
+}
+
+.type-grass {
+  background-color: #d9eccf;
+}
+
+.type-grass:hover {
+  background-color: #bcdeaa;
+}
+
+.type-grassnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #bcbc97));
+  background: linear-gradient(#d9eccf 50%, #bcbc97 50%);
+}
+
+.type-grassnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #cae5bc 50%, #b2b288 50%);
+}
+
+.type-grassfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #f39d60));
+  background: linear-gradient(#d9eccf 50%, #f39d60 50%);
+}
+
+.type-grassfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #cae5bc 50%, #f28f48 50%);
+}
+
+.type-grasswater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #96b2f5));
+  background: linear-gradient(#d9eccf 50%, #96b2f5 50%);
+}
+
+.type-grasswater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #cae5bc 50%, #7fa1f2 50%);
+}
+
+.type-grassgrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #d9eccf));
+  background: linear-gradient(#d9eccf 50%, #d9eccf 50%);
+}
+
+.type-grassgrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #cae5bc 50%, #cae5bc 50%);
+}
+
+.type-grasselectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #fadb61));
+  background: linear-gradient(#d9eccf 50%, #fadb61 50%);
+}
+
+.type-grasselectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #cae5bc 50%, #f9d649 50%);
+}
+
+.type-grassice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #bde6e6));
+  background: linear-gradient(#d9eccf 50%, #bde6e6 50%);
+}
+
+.type-grassice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #cae5bc 50%, #aadfdf 50%);
+}
+
+.type-grassground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #e9d292));
+  background: linear-gradient(#d9eccf 50%, #e9d292 50%);
+}
+
+.type-grassground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #cae5bc 50%, #e4c97d 50%);
+}
+
+.type-grassflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#d9eccf 50%, #cbbdf6 50%);
+}
+
+.type-grassflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #cae5bc 50%, #baa6f3 50%);
+}
+
+.type-grasspoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #bc57bc));
+  background: linear-gradient(#d9eccf 50%, #bc57bc 50%);
+}
+
+.type-grasspoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #cae5bc 50%, #b247b2 50%);
+}
+
+.type-grassfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #d84b43));
+  background: linear-gradient(#d9eccf 50%, #d84b43 50%);
+}
+
+.type-grassfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #cae5bc 50%, #d3372e 50%);
+}
+
+.type-grasspsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #fa89ab));
+  background: linear-gradient(#d9eccf 50%, #fa89ab 50%);
+}
+
+.type-grasspsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #cae5bc 50%, #f97099 50%);
+}
+
+.type-grassdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #8f705c));
+  background: linear-gradient(#d9eccf 50%, #8f705c 50%);
+}
+
+.type-grassdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #cae5bc 50%, #806452 50%);
+}
+
+.type-grassrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #ccb657));
+  background: linear-gradient(#d9eccf 50%, #ccb657 50%);
+}
+
+.type-grassrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #cae5bc 50%, #c6ae44 50%);
+}
+
+.type-grassbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #c9db30));
+  background: linear-gradient(#d9eccf 50%, #c9db30 50%);
+}
+
+.type-grassbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #cae5bc 50%, #bcce24 50%);
+}
+
+.type-grassghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #8a74af));
+  background: linear-gradient(#d9eccf 50%, #8a74af 50%);
+}
+
+.type-grassghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #cae5bc 50%, #7d64a5 50%);
+}
+
+.type-grasssteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#d9eccf 50%, #d7d7e4 50%);
+}
+
+.type-grasssteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #cae5bc 50%, #c7c7da 50%);
+}
+
+.type-grassdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #9369fa));
+  background: linear-gradient(#d9eccf 50%, #9369fa 50%);
+}
+
+.type-grassdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #cae5bc 50%, #8251f9 50%);
+}
+
+.type-grassfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d9eccf), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#d9eccf 50%, #ffe1eb 50%);
+}
+
+.type-grassfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #cae5bc), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #cae5bc 50%, #ffc8da 50%);
+}
+
+.type-electric {
+  background-color: #fadb61;
+}
+
+.type-electric:hover {
+  background-color: #f8d030;
+}
+
+.type-electricnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #bcbc97));
+  background: linear-gradient(#fadb61 50%, #bcbc97 50%);
+}
+
+.type-electricnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #f9d649 50%, #b2b288 50%);
+}
+
+.type-electricfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #f39d60));
+  background: linear-gradient(#fadb61 50%, #f39d60 50%);
+}
+
+.type-electricfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #f9d649 50%, #f28f48 50%);
+}
+
+.type-electricwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #96b2f5));
+  background: linear-gradient(#fadb61 50%, #96b2f5 50%);
+}
+
+.type-electricwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #f9d649 50%, #7fa1f2 50%);
+}
+
+.type-electricgrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #d9eccf));
+  background: linear-gradient(#fadb61 50%, #d9eccf 50%);
+}
+
+.type-electricgrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #f9d649 50%, #cae5bc 50%);
+}
+
+.type-electricelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #fadb61));
+  background: linear-gradient(#fadb61 50%, #fadb61 50%);
+}
+
+.type-electricelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #f9d649 50%, #f9d649 50%);
+}
+
+.type-electricice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #bde6e6));
+  background: linear-gradient(#fadb61 50%, #bde6e6 50%);
+}
+
+.type-electricice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #f9d649 50%, #aadfdf 50%);
+}
+
+.type-electricground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #e9d292));
+  background: linear-gradient(#fadb61 50%, #e9d292 50%);
+}
+
+.type-electricground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #f9d649 50%, #e4c97d 50%);
+}
+
+.type-electricflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#fadb61 50%, #cbbdf6 50%);
+}
+
+.type-electricflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #f9d649 50%, #baa6f3 50%);
+}
+
+.type-electricpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #bc57bc));
+  background: linear-gradient(#fadb61 50%, #bc57bc 50%);
+}
+
+.type-electricpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #f9d649 50%, #b247b2 50%);
+}
+
+.type-electricfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #d84b43));
+  background: linear-gradient(#fadb61 50%, #d84b43 50%);
+}
+
+.type-electricfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #f9d649 50%, #d3372e 50%);
+}
+
+.type-electricpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #fa89ab));
+  background: linear-gradient(#fadb61 50%, #fa89ab 50%);
+}
+
+.type-electricpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #f9d649 50%, #f97099 50%);
+}
+
+.type-electricdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #8f705c));
+  background: linear-gradient(#fadb61 50%, #8f705c 50%);
+}
+
+.type-electricdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #f9d649 50%, #806452 50%);
+}
+
+.type-electricrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #ccb657));
+  background: linear-gradient(#fadb61 50%, #ccb657 50%);
+}
+
+.type-electricrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #f9d649 50%, #c6ae44 50%);
+}
+
+.type-electricbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #c9db30));
+  background: linear-gradient(#fadb61 50%, #c9db30 50%);
+}
+
+.type-electricbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #f9d649 50%, #bcce24 50%);
+}
+
+.type-electricghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #8a74af));
+  background: linear-gradient(#fadb61 50%, #8a74af 50%);
+}
+
+.type-electricghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #f9d649 50%, #7d64a5 50%);
+}
+
+.type-electricsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#fadb61 50%, #d7d7e4 50%);
+}
+
+.type-electricsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #f9d649 50%, #c7c7da 50%);
+}
+
+.type-electricdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #9369fa));
+  background: linear-gradient(#fadb61 50%, #9369fa 50%);
+}
+
+.type-electricdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #f9d649 50%, #8251f9 50%);
+}
+
+.type-electricfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fadb61), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#fadb61 50%, #ffe1eb 50%);
+}
+
+.type-electricfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f9d649), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #f9d649 50%, #ffc8da 50%);
+}
+
+.type-ice {
+  background-color: #bde6e6;
+}
+
+.type-ice:hover {
+  background-color: #98d8d8;
+}
+
+.type-icenormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #bcbc97));
+  background: linear-gradient(#bde6e6 50%, #bcbc97 50%);
+}
+
+.type-icenormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #aadfdf 50%, #b2b288 50%);
+}
+
+.type-icefire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #f39d60));
+  background: linear-gradient(#bde6e6 50%, #f39d60 50%);
+}
+
+.type-icefire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #aadfdf 50%, #f28f48 50%);
+}
+
+.type-icewater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #96b2f5));
+  background: linear-gradient(#bde6e6 50%, #96b2f5 50%);
+}
+
+.type-icewater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #aadfdf 50%, #7fa1f2 50%);
+}
+
+.type-icegrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #d9eccf));
+  background: linear-gradient(#bde6e6 50%, #d9eccf 50%);
+}
+
+.type-icegrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #aadfdf 50%, #cae5bc 50%);
+}
+
+.type-iceelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #fadb61));
+  background: linear-gradient(#bde6e6 50%, #fadb61 50%);
+}
+
+.type-iceelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #aadfdf 50%, #f9d649 50%);
+}
+
+.type-iceice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #bde6e6));
+  background: linear-gradient(#bde6e6 50%, #bde6e6 50%);
+}
+
+.type-iceice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #aadfdf 50%, #aadfdf 50%);
+}
+
+.type-iceground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #e9d292));
+  background: linear-gradient(#bde6e6 50%, #e9d292 50%);
+}
+
+.type-iceground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #aadfdf 50%, #e4c97d 50%);
+}
+
+.type-iceflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#bde6e6 50%, #cbbdf6 50%);
+}
+
+.type-iceflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #aadfdf 50%, #baa6f3 50%);
+}
+
+.type-icepoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #bc57bc));
+  background: linear-gradient(#bde6e6 50%, #bc57bc 50%);
+}
+
+.type-icepoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #aadfdf 50%, #b247b2 50%);
+}
+
+.type-icefighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #d84b43));
+  background: linear-gradient(#bde6e6 50%, #d84b43 50%);
+}
+
+.type-icefighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #aadfdf 50%, #d3372e 50%);
+}
+
+.type-icepsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #fa89ab));
+  background: linear-gradient(#bde6e6 50%, #fa89ab 50%);
+}
+
+.type-icepsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #aadfdf 50%, #f97099 50%);
+}
+
+.type-icedark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #8f705c));
+  background: linear-gradient(#bde6e6 50%, #8f705c 50%);
+}
+
+.type-icedark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #aadfdf 50%, #806452 50%);
+}
+
+.type-icerock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #ccb657));
+  background: linear-gradient(#bde6e6 50%, #ccb657 50%);
+}
+
+.type-icerock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #aadfdf 50%, #c6ae44 50%);
+}
+
+.type-icebug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #c9db30));
+  background: linear-gradient(#bde6e6 50%, #c9db30 50%);
+}
+
+.type-icebug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #aadfdf 50%, #bcce24 50%);
+}
+
+.type-iceghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #8a74af));
+  background: linear-gradient(#bde6e6 50%, #8a74af 50%);
+}
+
+.type-iceghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #aadfdf 50%, #7d64a5 50%);
+}
+
+.type-icesteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#bde6e6 50%, #d7d7e4 50%);
+}
+
+.type-icesteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #aadfdf 50%, #c7c7da 50%);
+}
+
+.type-icedragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #9369fa));
+  background: linear-gradient(#bde6e6 50%, #9369fa 50%);
+}
+
+.type-icedragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #aadfdf 50%, #8251f9 50%);
+}
+
+.type-icefairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bde6e6), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#bde6e6 50%, #ffe1eb 50%);
+}
+
+.type-icefairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #aadfdf), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #aadfdf 50%, #ffc8da 50%);
+}
+
+.type-ground {
+  background-color: #e9d292;
+}
+
+.type-ground:hover {
+  background-color: #e0c068;
+}
+
+.type-groundnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #bcbc97));
+  background: linear-gradient(#e9d292 50%, #bcbc97 50%);
+}
+
+.type-groundnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #e4c97d 50%, #b2b288 50%);
+}
+
+.type-groundfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #f39d60));
+  background: linear-gradient(#e9d292 50%, #f39d60 50%);
+}
+
+.type-groundfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #e4c97d 50%, #f28f48 50%);
+}
+
+.type-groundwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #96b2f5));
+  background: linear-gradient(#e9d292 50%, #96b2f5 50%);
+}
+
+.type-groundwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #e4c97d 50%, #7fa1f2 50%);
+}
+
+.type-groundgrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #d9eccf));
+  background: linear-gradient(#e9d292 50%, #d9eccf 50%);
+}
+
+.type-groundgrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #e4c97d 50%, #cae5bc 50%);
+}
+
+.type-groundelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #fadb61));
+  background: linear-gradient(#e9d292 50%, #fadb61 50%);
+}
+
+.type-groundelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #e4c97d 50%, #f9d649 50%);
+}
+
+.type-groundice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #bde6e6));
+  background: linear-gradient(#e9d292 50%, #bde6e6 50%);
+}
+
+.type-groundice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #e4c97d 50%, #aadfdf 50%);
+}
+
+.type-groundground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #e9d292));
+  background: linear-gradient(#e9d292 50%, #e9d292 50%);
+}
+
+.type-groundground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #e4c97d 50%, #e4c97d 50%);
+}
+
+.type-groundflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#e9d292 50%, #cbbdf6 50%);
+}
+
+.type-groundflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #e4c97d 50%, #baa6f3 50%);
+}
+
+.type-groundpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #bc57bc));
+  background: linear-gradient(#e9d292 50%, #bc57bc 50%);
+}
+
+.type-groundpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #e4c97d 50%, #b247b2 50%);
+}
+
+.type-groundfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #d84b43));
+  background: linear-gradient(#e9d292 50%, #d84b43 50%);
+}
+
+.type-groundfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #e4c97d 50%, #d3372e 50%);
+}
+
+.type-groundpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #fa89ab));
+  background: linear-gradient(#e9d292 50%, #fa89ab 50%);
+}
+
+.type-groundpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #e4c97d 50%, #f97099 50%);
+}
+
+.type-grounddark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #8f705c));
+  background: linear-gradient(#e9d292 50%, #8f705c 50%);
+}
+
+.type-grounddark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #e4c97d 50%, #806452 50%);
+}
+
+.type-groundrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #ccb657));
+  background: linear-gradient(#e9d292 50%, #ccb657 50%);
+}
+
+.type-groundrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #e4c97d 50%, #c6ae44 50%);
+}
+
+.type-groundbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #c9db30));
+  background: linear-gradient(#e9d292 50%, #c9db30 50%);
+}
+
+.type-groundbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #e4c97d 50%, #bcce24 50%);
+}
+
+.type-groundghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #8a74af));
+  background: linear-gradient(#e9d292 50%, #8a74af 50%);
+}
+
+.type-groundghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #e4c97d 50%, #7d64a5 50%);
+}
+
+.type-groundsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#e9d292 50%, #d7d7e4 50%);
+}
+
+.type-groundsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #e4c97d 50%, #c7c7da 50%);
+}
+
+.type-grounddragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #9369fa));
+  background: linear-gradient(#e9d292 50%, #9369fa 50%);
+}
+
+.type-grounddragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #e4c97d 50%, #8251f9 50%);
+}
+
+.type-groundfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9d292), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#e9d292 50%, #ffe1eb 50%);
+}
+
+.type-groundfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #e4c97d), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #e4c97d 50%, #ffc8da 50%);
+}
+
+.type-flying {
+  background-color: #cbbdf6;
+}
+
+.type-flying:hover {
+  background-color: #a890f0;
+}
+
+.type-flyingnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #bcbc97));
+  background: linear-gradient(#cbbdf6 50%, #bcbc97 50%);
+}
+
+.type-flyingnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #baa6f3 50%, #b2b288 50%);
+}
+
+.type-flyingfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #f39d60));
+  background: linear-gradient(#cbbdf6 50%, #f39d60 50%);
+}
+
+.type-flyingfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #baa6f3 50%, #f28f48 50%);
+}
+
+.type-flyingwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #96b2f5));
+  background: linear-gradient(#cbbdf6 50%, #96b2f5 50%);
+}
+
+.type-flyingwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #baa6f3 50%, #7fa1f2 50%);
+}
+
+.type-flyinggrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #d9eccf));
+  background: linear-gradient(#cbbdf6 50%, #d9eccf 50%);
+}
+
+.type-flyinggrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #baa6f3 50%, #cae5bc 50%);
+}
+
+.type-flyingelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #fadb61));
+  background: linear-gradient(#cbbdf6 50%, #fadb61 50%);
+}
+
+.type-flyingelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #baa6f3 50%, #f9d649 50%);
+}
+
+.type-flyingice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #bde6e6));
+  background: linear-gradient(#cbbdf6 50%, #bde6e6 50%);
+}
+
+.type-flyingice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #baa6f3 50%, #aadfdf 50%);
+}
+
+.type-flyingground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #e9d292));
+  background: linear-gradient(#cbbdf6 50%, #e9d292 50%);
+}
+
+.type-flyingground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #baa6f3 50%, #e4c97d 50%);
+}
+
+.type-flyingflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#cbbdf6 50%, #cbbdf6 50%);
+}
+
+.type-flyingflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #baa6f3 50%, #baa6f3 50%);
+}
+
+.type-flyingpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #bc57bc));
+  background: linear-gradient(#cbbdf6 50%, #bc57bc 50%);
+}
+
+.type-flyingpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #baa6f3 50%, #b247b2 50%);
+}
+
+.type-flyingfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #d84b43));
+  background: linear-gradient(#cbbdf6 50%, #d84b43 50%);
+}
+
+.type-flyingfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #baa6f3 50%, #d3372e 50%);
+}
+
+.type-flyingpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #fa89ab));
+  background: linear-gradient(#cbbdf6 50%, #fa89ab 50%);
+}
+
+.type-flyingpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #baa6f3 50%, #f97099 50%);
+}
+
+.type-flyingdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #8f705c));
+  background: linear-gradient(#cbbdf6 50%, #8f705c 50%);
+}
+
+.type-flyingdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #baa6f3 50%, #806452 50%);
+}
+
+.type-flyingrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #ccb657));
+  background: linear-gradient(#cbbdf6 50%, #ccb657 50%);
+}
+
+.type-flyingrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #baa6f3 50%, #c6ae44 50%);
+}
+
+.type-flyingbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #c9db30));
+  background: linear-gradient(#cbbdf6 50%, #c9db30 50%);
+}
+
+.type-flyingbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #baa6f3 50%, #bcce24 50%);
+}
+
+.type-flyingghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #8a74af));
+  background: linear-gradient(#cbbdf6 50%, #8a74af 50%);
+}
+
+.type-flyingghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #baa6f3 50%, #7d64a5 50%);
+}
+
+.type-flyingsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#cbbdf6 50%, #d7d7e4 50%);
+}
+
+.type-flyingsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #baa6f3 50%, #c7c7da 50%);
+}
+
+.type-flyingdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #9369fa));
+  background: linear-gradient(#cbbdf6 50%, #9369fa 50%);
+}
+
+.type-flyingdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #baa6f3 50%, #8251f9 50%);
+}
+
+.type-flyingfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cbbdf6), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#cbbdf6 50%, #ffe1eb 50%);
+}
+
+.type-flyingfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #baa6f3), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #baa6f3 50%, #ffc8da 50%);
+}
+
+.type-poison {
+  background-color: #bc57bc;
+}
+
+.type-poison:hover {
+  background-color: #a040a0;
+}
+
+.type-poisonnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #bcbc97));
+  background: linear-gradient(#bc57bc 50%, #bcbc97 50%);
+}
+
+.type-poisonnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #b247b2 50%, #b2b288 50%);
+}
+
+.type-poisonfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #f39d60));
+  background: linear-gradient(#bc57bc 50%, #f39d60 50%);
+}
+
+.type-poisonfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #b247b2 50%, #f28f48 50%);
+}
+
+.type-poisonwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #96b2f5));
+  background: linear-gradient(#bc57bc 50%, #96b2f5 50%);
+}
+
+.type-poisonwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #b247b2 50%, #7fa1f2 50%);
+}
+
+.type-poisongrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #d9eccf));
+  background: linear-gradient(#bc57bc 50%, #d9eccf 50%);
+}
+
+.type-poisongrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #b247b2 50%, #cae5bc 50%);
+}
+
+.type-poisonelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #fadb61));
+  background: linear-gradient(#bc57bc 50%, #fadb61 50%);
+}
+
+.type-poisonelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #b247b2 50%, #f9d649 50%);
+}
+
+.type-poisonice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #bde6e6));
+  background: linear-gradient(#bc57bc 50%, #bde6e6 50%);
+}
+
+.type-poisonice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #b247b2 50%, #aadfdf 50%);
+}
+
+.type-poisonground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #e9d292));
+  background: linear-gradient(#bc57bc 50%, #e9d292 50%);
+}
+
+.type-poisonground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #b247b2 50%, #e4c97d 50%);
+}
+
+.type-poisonflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#bc57bc 50%, #cbbdf6 50%);
+}
+
+.type-poisonflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #b247b2 50%, #baa6f3 50%);
+}
+
+.type-poisonpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #bc57bc));
+  background: linear-gradient(#bc57bc 50%, #bc57bc 50%);
+}
+
+.type-poisonpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #b247b2 50%, #b247b2 50%);
+}
+
+.type-poisonfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #d84b43));
+  background: linear-gradient(#bc57bc 50%, #d84b43 50%);
+}
+
+.type-poisonfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #b247b2 50%, #d3372e 50%);
+}
+
+.type-poisonpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #fa89ab));
+  background: linear-gradient(#bc57bc 50%, #fa89ab 50%);
+}
+
+.type-poisonpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #b247b2 50%, #f97099 50%);
+}
+
+.type-poisondark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #8f705c));
+  background: linear-gradient(#bc57bc 50%, #8f705c 50%);
+}
+
+.type-poisondark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #b247b2 50%, #806452 50%);
+}
+
+.type-poisonrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #ccb657));
+  background: linear-gradient(#bc57bc 50%, #ccb657 50%);
+}
+
+.type-poisonrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #b247b2 50%, #c6ae44 50%);
+}
+
+.type-poisonbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #c9db30));
+  background: linear-gradient(#bc57bc 50%, #c9db30 50%);
+}
+
+.type-poisonbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #b247b2 50%, #bcce24 50%);
+}
+
+.type-poisonghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #8a74af));
+  background: linear-gradient(#bc57bc 50%, #8a74af 50%);
+}
+
+.type-poisonghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #b247b2 50%, #7d64a5 50%);
+}
+
+.type-poisonsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#bc57bc 50%, #d7d7e4 50%);
+}
+
+.type-poisonsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #b247b2 50%, #c7c7da 50%);
+}
+
+.type-poisondragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #9369fa));
+  background: linear-gradient(#bc57bc 50%, #9369fa 50%);
+}
+
+.type-poisondragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #b247b2 50%, #8251f9 50%);
+}
+
+.type-poisonfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bc57bc), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#bc57bc 50%, #ffe1eb 50%);
+}
+
+.type-poisonfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #b247b2), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #b247b2 50%, #ffc8da 50%);
+}
+
+.type-fighting {
+  background-color: #d84b43;
+}
+
+.type-fighting:hover {
+  background-color: #c03028;
+}
+
+.type-fightingnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #bcbc97));
+  background: linear-gradient(#d84b43 50%, #bcbc97 50%);
+}
+
+.type-fightingnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #d3372e 50%, #b2b288 50%);
+}
+
+.type-fightingfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #f39d60));
+  background: linear-gradient(#d84b43 50%, #f39d60 50%);
+}
+
+.type-fightingfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #d3372e 50%, #f28f48 50%);
+}
+
+.type-fightingwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #96b2f5));
+  background: linear-gradient(#d84b43 50%, #96b2f5 50%);
+}
+
+.type-fightingwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #d3372e 50%, #7fa1f2 50%);
+}
+
+.type-fightinggrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #d9eccf));
+  background: linear-gradient(#d84b43 50%, #d9eccf 50%);
+}
+
+.type-fightinggrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #d3372e 50%, #cae5bc 50%);
+}
+
+.type-fightingelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #fadb61));
+  background: linear-gradient(#d84b43 50%, #fadb61 50%);
+}
+
+.type-fightingelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #d3372e 50%, #f9d649 50%);
+}
+
+.type-fightingice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #bde6e6));
+  background: linear-gradient(#d84b43 50%, #bde6e6 50%);
+}
+
+.type-fightingice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #d3372e 50%, #aadfdf 50%);
+}
+
+.type-fightingground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #e9d292));
+  background: linear-gradient(#d84b43 50%, #e9d292 50%);
+}
+
+.type-fightingground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #d3372e 50%, #e4c97d 50%);
+}
+
+.type-fightingflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#d84b43 50%, #cbbdf6 50%);
+}
+
+.type-fightingflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #d3372e 50%, #baa6f3 50%);
+}
+
+.type-fightingpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #bc57bc));
+  background: linear-gradient(#d84b43 50%, #bc57bc 50%);
+}
+
+.type-fightingpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #d3372e 50%, #b247b2 50%);
+}
+
+.type-fightingfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #d84b43));
+  background: linear-gradient(#d84b43 50%, #d84b43 50%);
+}
+
+.type-fightingfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #d3372e 50%, #d3372e 50%);
+}
+
+.type-fightingpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #fa89ab));
+  background: linear-gradient(#d84b43 50%, #fa89ab 50%);
+}
+
+.type-fightingpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #d3372e 50%, #f97099 50%);
+}
+
+.type-fightingdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #8f705c));
+  background: linear-gradient(#d84b43 50%, #8f705c 50%);
+}
+
+.type-fightingdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #d3372e 50%, #806452 50%);
+}
+
+.type-fightingrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #ccb657));
+  background: linear-gradient(#d84b43 50%, #ccb657 50%);
+}
+
+.type-fightingrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #d3372e 50%, #c6ae44 50%);
+}
+
+.type-fightingbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #c9db30));
+  background: linear-gradient(#d84b43 50%, #c9db30 50%);
+}
+
+.type-fightingbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #d3372e 50%, #bcce24 50%);
+}
+
+.type-fightingghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #8a74af));
+  background: linear-gradient(#d84b43 50%, #8a74af 50%);
+}
+
+.type-fightingghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #d3372e 50%, #7d64a5 50%);
+}
+
+.type-fightingsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#d84b43 50%, #d7d7e4 50%);
+}
+
+.type-fightingsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #d3372e 50%, #c7c7da 50%);
+}
+
+.type-fightingdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #9369fa));
+  background: linear-gradient(#d84b43 50%, #9369fa 50%);
+}
+
+.type-fightingdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #d3372e 50%, #8251f9 50%);
+}
+
+.type-fightingfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d84b43), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#d84b43 50%, #ffe1eb 50%);
+}
+
+.type-fightingfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #d3372e), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #d3372e 50%, #ffc8da 50%);
+}
+
+.type-psychic {
+  background-color: #fa89ab;
+}
+
+.type-psychic:hover {
+  background-color: #f85888;
+}
+
+.type-psychicnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #bcbc97));
+  background: linear-gradient(#fa89ab 50%, #bcbc97 50%);
+}
+
+.type-psychicnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #f97099 50%, #b2b288 50%);
+}
+
+.type-psychicfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #f39d60));
+  background: linear-gradient(#fa89ab 50%, #f39d60 50%);
+}
+
+.type-psychicfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #f97099 50%, #f28f48 50%);
+}
+
+.type-psychicwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #96b2f5));
+  background: linear-gradient(#fa89ab 50%, #96b2f5 50%);
+}
+
+.type-psychicwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #f97099 50%, #7fa1f2 50%);
+}
+
+.type-psychicgrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #d9eccf));
+  background: linear-gradient(#fa89ab 50%, #d9eccf 50%);
+}
+
+.type-psychicgrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #f97099 50%, #cae5bc 50%);
+}
+
+.type-psychicelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #fadb61));
+  background: linear-gradient(#fa89ab 50%, #fadb61 50%);
+}
+
+.type-psychicelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #f97099 50%, #f9d649 50%);
+}
+
+.type-psychicice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #bde6e6));
+  background: linear-gradient(#fa89ab 50%, #bde6e6 50%);
+}
+
+.type-psychicice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #f97099 50%, #aadfdf 50%);
+}
+
+.type-psychicground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #e9d292));
+  background: linear-gradient(#fa89ab 50%, #e9d292 50%);
+}
+
+.type-psychicground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #f97099 50%, #e4c97d 50%);
+}
+
+.type-psychicflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#fa89ab 50%, #cbbdf6 50%);
+}
+
+.type-psychicflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #f97099 50%, #baa6f3 50%);
+}
+
+.type-psychicpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #bc57bc));
+  background: linear-gradient(#fa89ab 50%, #bc57bc 50%);
+}
+
+.type-psychicpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #f97099 50%, #b247b2 50%);
+}
+
+.type-psychicfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #d84b43));
+  background: linear-gradient(#fa89ab 50%, #d84b43 50%);
+}
+
+.type-psychicfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #f97099 50%, #d3372e 50%);
+}
+
+.type-psychicpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #fa89ab));
+  background: linear-gradient(#fa89ab 50%, #fa89ab 50%);
+}
+
+.type-psychicpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #f97099 50%, #f97099 50%);
+}
+
+.type-psychicdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #8f705c));
+  background: linear-gradient(#fa89ab 50%, #8f705c 50%);
+}
+
+.type-psychicdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #f97099 50%, #806452 50%);
+}
+
+.type-psychicrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #ccb657));
+  background: linear-gradient(#fa89ab 50%, #ccb657 50%);
+}
+
+.type-psychicrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #f97099 50%, #c6ae44 50%);
+}
+
+.type-psychicbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #c9db30));
+  background: linear-gradient(#fa89ab 50%, #c9db30 50%);
+}
+
+.type-psychicbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #f97099 50%, #bcce24 50%);
+}
+
+.type-psychicghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #8a74af));
+  background: linear-gradient(#fa89ab 50%, #8a74af 50%);
+}
+
+.type-psychicghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #f97099 50%, #7d64a5 50%);
+}
+
+.type-psychicsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#fa89ab 50%, #d7d7e4 50%);
+}
+
+.type-psychicsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #f97099 50%, #c7c7da 50%);
+}
+
+.type-psychicdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #9369fa));
+  background: linear-gradient(#fa89ab 50%, #9369fa 50%);
+}
+
+.type-psychicdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #f97099 50%, #8251f9 50%);
+}
+
+.type-psychicfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fa89ab), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#fa89ab 50%, #ffe1eb 50%);
+}
+
+.type-psychicfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f97099), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #f97099 50%, #ffc8da 50%);
+}
+
+.type-dark {
+  background-color: #8f705c;
+}
+
+.type-dark:hover {
+  background-color: #705848;
+}
+
+.type-darknormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #bcbc97));
+  background: linear-gradient(#8f705c 50%, #bcbc97 50%);
+}
+
+.type-darknormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #806452 50%, #b2b288 50%);
+}
+
+.type-darkfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #f39d60));
+  background: linear-gradient(#8f705c 50%, #f39d60 50%);
+}
+
+.type-darkfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #806452 50%, #f28f48 50%);
+}
+
+.type-darkwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #96b2f5));
+  background: linear-gradient(#8f705c 50%, #96b2f5 50%);
+}
+
+.type-darkwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #806452 50%, #7fa1f2 50%);
+}
+
+.type-darkgrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #d9eccf));
+  background: linear-gradient(#8f705c 50%, #d9eccf 50%);
+}
+
+.type-darkgrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #806452 50%, #cae5bc 50%);
+}
+
+.type-darkelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #fadb61));
+  background: linear-gradient(#8f705c 50%, #fadb61 50%);
+}
+
+.type-darkelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #806452 50%, #f9d649 50%);
+}
+
+.type-darkice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #bde6e6));
+  background: linear-gradient(#8f705c 50%, #bde6e6 50%);
+}
+
+.type-darkice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #806452 50%, #aadfdf 50%);
+}
+
+.type-darkground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #e9d292));
+  background: linear-gradient(#8f705c 50%, #e9d292 50%);
+}
+
+.type-darkground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #806452 50%, #e4c97d 50%);
+}
+
+.type-darkflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#8f705c 50%, #cbbdf6 50%);
+}
+
+.type-darkflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #806452 50%, #baa6f3 50%);
+}
+
+.type-darkpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #bc57bc));
+  background: linear-gradient(#8f705c 50%, #bc57bc 50%);
+}
+
+.type-darkpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #806452 50%, #b247b2 50%);
+}
+
+.type-darkfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #d84b43));
+  background: linear-gradient(#8f705c 50%, #d84b43 50%);
+}
+
+.type-darkfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #806452 50%, #d3372e 50%);
+}
+
+.type-darkpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #fa89ab));
+  background: linear-gradient(#8f705c 50%, #fa89ab 50%);
+}
+
+.type-darkpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #806452 50%, #f97099 50%);
+}
+
+.type-darkdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #8f705c));
+  background: linear-gradient(#8f705c 50%, #8f705c 50%);
+}
+
+.type-darkdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #806452 50%, #806452 50%);
+}
+
+.type-darkrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #ccb657));
+  background: linear-gradient(#8f705c 50%, #ccb657 50%);
+}
+
+.type-darkrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #806452 50%, #c6ae44 50%);
+}
+
+.type-darkbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #c9db30));
+  background: linear-gradient(#8f705c 50%, #c9db30 50%);
+}
+
+.type-darkbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #806452 50%, #bcce24 50%);
+}
+
+.type-darkghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #8a74af));
+  background: linear-gradient(#8f705c 50%, #8a74af 50%);
+}
+
+.type-darkghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #806452 50%, #7d64a5 50%);
+}
+
+.type-darksteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#8f705c 50%, #d7d7e4 50%);
+}
+
+.type-darksteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #806452 50%, #c7c7da 50%);
+}
+
+.type-darkdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #9369fa));
+  background: linear-gradient(#8f705c 50%, #9369fa 50%);
+}
+
+.type-darkdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #806452 50%, #8251f9 50%);
+}
+
+.type-darkfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8f705c), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#8f705c 50%, #ffe1eb 50%);
+}
+
+.type-darkfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #806452), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #806452 50%, #ffc8da 50%);
+}
+
+.type-rock {
+  background-color: #ccb657;
+}
+
+.type-rock:hover {
+  background-color: #b8a038;
+}
+
+.type-rocknormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #bcbc97));
+  background: linear-gradient(#ccb657 50%, #bcbc97 50%);
+}
+
+.type-rocknormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #c6ae44 50%, #b2b288 50%);
+}
+
+.type-rockfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #f39d60));
+  background: linear-gradient(#ccb657 50%, #f39d60 50%);
+}
+
+.type-rockfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #c6ae44 50%, #f28f48 50%);
+}
+
+.type-rockwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #96b2f5));
+  background: linear-gradient(#ccb657 50%, #96b2f5 50%);
+}
+
+.type-rockwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #c6ae44 50%, #7fa1f2 50%);
+}
+
+.type-rockgrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #d9eccf));
+  background: linear-gradient(#ccb657 50%, #d9eccf 50%);
+}
+
+.type-rockgrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #c6ae44 50%, #cae5bc 50%);
+}
+
+.type-rockelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #fadb61));
+  background: linear-gradient(#ccb657 50%, #fadb61 50%);
+}
+
+.type-rockelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #c6ae44 50%, #f9d649 50%);
+}
+
+.type-rockice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #bde6e6));
+  background: linear-gradient(#ccb657 50%, #bde6e6 50%);
+}
+
+.type-rockice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #c6ae44 50%, #aadfdf 50%);
+}
+
+.type-rockground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #e9d292));
+  background: linear-gradient(#ccb657 50%, #e9d292 50%);
+}
+
+.type-rockground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #c6ae44 50%, #e4c97d 50%);
+}
+
+.type-rockflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#ccb657 50%, #cbbdf6 50%);
+}
+
+.type-rockflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #c6ae44 50%, #baa6f3 50%);
+}
+
+.type-rockpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #bc57bc));
+  background: linear-gradient(#ccb657 50%, #bc57bc 50%);
+}
+
+.type-rockpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #c6ae44 50%, #b247b2 50%);
+}
+
+.type-rockfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #d84b43));
+  background: linear-gradient(#ccb657 50%, #d84b43 50%);
+}
+
+.type-rockfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #c6ae44 50%, #d3372e 50%);
+}
+
+.type-rockpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #fa89ab));
+  background: linear-gradient(#ccb657 50%, #fa89ab 50%);
+}
+
+.type-rockpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #c6ae44 50%, #f97099 50%);
+}
+
+.type-rockdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #8f705c));
+  background: linear-gradient(#ccb657 50%, #8f705c 50%);
+}
+
+.type-rockdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #c6ae44 50%, #806452 50%);
+}
+
+.type-rockrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #ccb657));
+  background: linear-gradient(#ccb657 50%, #ccb657 50%);
+}
+
+.type-rockrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #c6ae44 50%, #c6ae44 50%);
+}
+
+.type-rockbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #c9db30));
+  background: linear-gradient(#ccb657 50%, #c9db30 50%);
+}
+
+.type-rockbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #c6ae44 50%, #bcce24 50%);
+}
+
+.type-rockghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #8a74af));
+  background: linear-gradient(#ccb657 50%, #8a74af 50%);
+}
+
+.type-rockghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #c6ae44 50%, #7d64a5 50%);
+}
+
+.type-rocksteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#ccb657 50%, #d7d7e4 50%);
+}
+
+.type-rocksteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #c6ae44 50%, #c7c7da 50%);
+}
+
+.type-rockdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #9369fa));
+  background: linear-gradient(#ccb657 50%, #9369fa 50%);
+}
+
+.type-rockdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #c6ae44 50%, #8251f9 50%);
+}
+
+.type-rockfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ccb657), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#ccb657 50%, #ffe1eb 50%);
+}
+
+.type-rockfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c6ae44), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #c6ae44 50%, #ffc8da 50%);
+}
+
+.type-bug {
+  background-color: #c9db30;
+}
+
+.type-bug:hover {
+  background-color: #a8b820;
+}
+
+.type-bugnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #bcbc97));
+  background: linear-gradient(#c9db30 50%, #bcbc97 50%);
+}
+
+.type-bugnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #bcce24 50%, #b2b288 50%);
+}
+
+.type-bugfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #f39d60));
+  background: linear-gradient(#c9db30 50%, #f39d60 50%);
+}
+
+.type-bugfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #bcce24 50%, #f28f48 50%);
+}
+
+.type-bugwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #96b2f5));
+  background: linear-gradient(#c9db30 50%, #96b2f5 50%);
+}
+
+.type-bugwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #bcce24 50%, #7fa1f2 50%);
+}
+
+.type-buggrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #d9eccf));
+  background: linear-gradient(#c9db30 50%, #d9eccf 50%);
+}
+
+.type-buggrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #bcce24 50%, #cae5bc 50%);
+}
+
+.type-bugelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #fadb61));
+  background: linear-gradient(#c9db30 50%, #fadb61 50%);
+}
+
+.type-bugelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #bcce24 50%, #f9d649 50%);
+}
+
+.type-bugice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #bde6e6));
+  background: linear-gradient(#c9db30 50%, #bde6e6 50%);
+}
+
+.type-bugice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #bcce24 50%, #aadfdf 50%);
+}
+
+.type-bugground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #e9d292));
+  background: linear-gradient(#c9db30 50%, #e9d292 50%);
+}
+
+.type-bugground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #bcce24 50%, #e4c97d 50%);
+}
+
+.type-bugflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#c9db30 50%, #cbbdf6 50%);
+}
+
+.type-bugflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #bcce24 50%, #baa6f3 50%);
+}
+
+.type-bugpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #bc57bc));
+  background: linear-gradient(#c9db30 50%, #bc57bc 50%);
+}
+
+.type-bugpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #bcce24 50%, #b247b2 50%);
+}
+
+.type-bugfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #d84b43));
+  background: linear-gradient(#c9db30 50%, #d84b43 50%);
+}
+
+.type-bugfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #bcce24 50%, #d3372e 50%);
+}
+
+.type-bugpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #fa89ab));
+  background: linear-gradient(#c9db30 50%, #fa89ab 50%);
+}
+
+.type-bugpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #bcce24 50%, #f97099 50%);
+}
+
+.type-bugdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #8f705c));
+  background: linear-gradient(#c9db30 50%, #8f705c 50%);
+}
+
+.type-bugdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #bcce24 50%, #806452 50%);
+}
+
+.type-bugrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #ccb657));
+  background: linear-gradient(#c9db30 50%, #ccb657 50%);
+}
+
+.type-bugrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #bcce24 50%, #c6ae44 50%);
+}
+
+.type-bugbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #c9db30));
+  background: linear-gradient(#c9db30 50%, #c9db30 50%);
+}
+
+.type-bugbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #bcce24 50%, #bcce24 50%);
+}
+
+.type-bugghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #8a74af));
+  background: linear-gradient(#c9db30 50%, #8a74af 50%);
+}
+
+.type-bugghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #bcce24 50%, #7d64a5 50%);
+}
+
+.type-bugsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#c9db30 50%, #d7d7e4 50%);
+}
+
+.type-bugsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #bcce24 50%, #c7c7da 50%);
+}
+
+.type-bugdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #9369fa));
+  background: linear-gradient(#c9db30 50%, #9369fa 50%);
+}
+
+.type-bugdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #bcce24 50%, #8251f9 50%);
+}
+
+.type-bugfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c9db30), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#c9db30 50%, #ffe1eb 50%);
+}
+
+.type-bugfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #bcce24), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #bcce24 50%, #ffc8da 50%);
+}
+
+.type-ghost {
+  background-color: #8a74af;
+}
+
+.type-ghost:hover {
+  background-color: #705898;
+}
+
+.type-ghostnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #bcbc97));
+  background: linear-gradient(#8a74af 50%, #bcbc97 50%);
+}
+
+.type-ghostnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #7d64a5 50%, #b2b288 50%);
+}
+
+.type-ghostfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #f39d60));
+  background: linear-gradient(#8a74af 50%, #f39d60 50%);
+}
+
+.type-ghostfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #7d64a5 50%, #f28f48 50%);
+}
+
+.type-ghostwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #96b2f5));
+  background: linear-gradient(#8a74af 50%, #96b2f5 50%);
+}
+
+.type-ghostwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #7d64a5 50%, #7fa1f2 50%);
+}
+
+.type-ghostgrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #d9eccf));
+  background: linear-gradient(#8a74af 50%, #d9eccf 50%);
+}
+
+.type-ghostgrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #7d64a5 50%, #cae5bc 50%);
+}
+
+.type-ghostelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #fadb61));
+  background: linear-gradient(#8a74af 50%, #fadb61 50%);
+}
+
+.type-ghostelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #7d64a5 50%, #f9d649 50%);
+}
+
+.type-ghostice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #bde6e6));
+  background: linear-gradient(#8a74af 50%, #bde6e6 50%);
+}
+
+.type-ghostice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #7d64a5 50%, #aadfdf 50%);
+}
+
+.type-ghostground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #e9d292));
+  background: linear-gradient(#8a74af 50%, #e9d292 50%);
+}
+
+.type-ghostground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #7d64a5 50%, #e4c97d 50%);
+}
+
+.type-ghostflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#8a74af 50%, #cbbdf6 50%);
+}
+
+.type-ghostflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #7d64a5 50%, #baa6f3 50%);
+}
+
+.type-ghostpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #bc57bc));
+  background: linear-gradient(#8a74af 50%, #bc57bc 50%);
+}
+
+.type-ghostpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #7d64a5 50%, #b247b2 50%);
+}
+
+.type-ghostfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #d84b43));
+  background: linear-gradient(#8a74af 50%, #d84b43 50%);
+}
+
+.type-ghostfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #7d64a5 50%, #d3372e 50%);
+}
+
+.type-ghostpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #fa89ab));
+  background: linear-gradient(#8a74af 50%, #fa89ab 50%);
+}
+
+.type-ghostpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #7d64a5 50%, #f97099 50%);
+}
+
+.type-ghostdark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #8f705c));
+  background: linear-gradient(#8a74af 50%, #8f705c 50%);
+}
+
+.type-ghostdark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #7d64a5 50%, #806452 50%);
+}
+
+.type-ghostrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #ccb657));
+  background: linear-gradient(#8a74af 50%, #ccb657 50%);
+}
+
+.type-ghostrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #7d64a5 50%, #c6ae44 50%);
+}
+
+.type-ghostbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #c9db30));
+  background: linear-gradient(#8a74af 50%, #c9db30 50%);
+}
+
+.type-ghostbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #7d64a5 50%, #bcce24 50%);
+}
+
+.type-ghostghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #8a74af));
+  background: linear-gradient(#8a74af 50%, #8a74af 50%);
+}
+
+.type-ghostghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #7d64a5 50%, #7d64a5 50%);
+}
+
+.type-ghoststeel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#8a74af 50%, #d7d7e4 50%);
+}
+
+.type-ghoststeel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #7d64a5 50%, #c7c7da 50%);
+}
+
+.type-ghostdragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #9369fa));
+  background: linear-gradient(#8a74af 50%, #9369fa 50%);
+}
+
+.type-ghostdragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #7d64a5 50%, #8251f9 50%);
+}
+
+.type-ghostfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8a74af), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#8a74af 50%, #ffe1eb 50%);
+}
+
+.type-ghostfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #7d64a5), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #7d64a5 50%, #ffc8da 50%);
+}
+
+.type-steel {
+  background-color: #d7d7e4;
+}
+
+.type-steel:hover {
+  background-color: #b8b8d0;
+}
+
+.type-steelnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #bcbc97));
+  background: linear-gradient(#d7d7e4 50%, #bcbc97 50%);
+}
+
+.type-steelnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #c7c7da 50%, #b2b288 50%);
+}
+
+.type-steelfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #f39d60));
+  background: linear-gradient(#d7d7e4 50%, #f39d60 50%);
+}
+
+.type-steelfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #c7c7da 50%, #f28f48 50%);
+}
+
+.type-steelwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #96b2f5));
+  background: linear-gradient(#d7d7e4 50%, #96b2f5 50%);
+}
+
+.type-steelwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #c7c7da 50%, #7fa1f2 50%);
+}
+
+.type-steelgrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #d9eccf));
+  background: linear-gradient(#d7d7e4 50%, #d9eccf 50%);
+}
+
+.type-steelgrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #c7c7da 50%, #cae5bc 50%);
+}
+
+.type-steelelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #fadb61));
+  background: linear-gradient(#d7d7e4 50%, #fadb61 50%);
+}
+
+.type-steelelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #c7c7da 50%, #f9d649 50%);
+}
+
+.type-steelice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #bde6e6));
+  background: linear-gradient(#d7d7e4 50%, #bde6e6 50%);
+}
+
+.type-steelice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #c7c7da 50%, #aadfdf 50%);
+}
+
+.type-steelground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #e9d292));
+  background: linear-gradient(#d7d7e4 50%, #e9d292 50%);
+}
+
+.type-steelground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #c7c7da 50%, #e4c97d 50%);
+}
+
+.type-steelflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#d7d7e4 50%, #cbbdf6 50%);
+}
+
+.type-steelflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #c7c7da 50%, #baa6f3 50%);
+}
+
+.type-steelpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #bc57bc));
+  background: linear-gradient(#d7d7e4 50%, #bc57bc 50%);
+}
+
+.type-steelpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #c7c7da 50%, #b247b2 50%);
+}
+
+.type-steelfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #d84b43));
+  background: linear-gradient(#d7d7e4 50%, #d84b43 50%);
+}
+
+.type-steelfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #c7c7da 50%, #d3372e 50%);
+}
+
+.type-steelpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #fa89ab));
+  background: linear-gradient(#d7d7e4 50%, #fa89ab 50%);
+}
+
+.type-steelpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #c7c7da 50%, #f97099 50%);
+}
+
+.type-steeldark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #8f705c));
+  background: linear-gradient(#d7d7e4 50%, #8f705c 50%);
+}
+
+.type-steeldark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #c7c7da 50%, #806452 50%);
+}
+
+.type-steelrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #ccb657));
+  background: linear-gradient(#d7d7e4 50%, #ccb657 50%);
+}
+
+.type-steelrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #c7c7da 50%, #c6ae44 50%);
+}
+
+.type-steelbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #c9db30));
+  background: linear-gradient(#d7d7e4 50%, #c9db30 50%);
+}
+
+.type-steelbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #c7c7da 50%, #bcce24 50%);
+}
+
+.type-steelghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #8a74af));
+  background: linear-gradient(#d7d7e4 50%, #8a74af 50%);
+}
+
+.type-steelghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #c7c7da 50%, #7d64a5 50%);
+}
+
+.type-steelsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#d7d7e4 50%, #d7d7e4 50%);
+}
+
+.type-steelsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #c7c7da 50%, #c7c7da 50%);
+}
+
+.type-steeldragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #9369fa));
+  background: linear-gradient(#d7d7e4 50%, #9369fa 50%);
+}
+
+.type-steeldragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #c7c7da 50%, #8251f9 50%);
+}
+
+.type-steelfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d7d7e4), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#d7d7e4 50%, #ffe1eb 50%);
+}
+
+.type-steelfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #c7c7da), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #c7c7da 50%, #ffc8da 50%);
+}
+
+.type-dragon {
+  background-color: #9369fa;
+}
+
+.type-dragon:hover {
+  background-color: #7038f8;
+}
+
+.type-dragonnormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #bcbc97));
+  background: linear-gradient(#9369fa 50%, #bcbc97 50%);
+}
+
+.type-dragonnormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #8251f9 50%, #b2b288 50%);
+}
+
+.type-dragonfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #f39d60));
+  background: linear-gradient(#9369fa 50%, #f39d60 50%);
+}
+
+.type-dragonfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #8251f9 50%, #f28f48 50%);
+}
+
+.type-dragonwater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #96b2f5));
+  background: linear-gradient(#9369fa 50%, #96b2f5 50%);
+}
+
+.type-dragonwater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #8251f9 50%, #7fa1f2 50%);
+}
+
+.type-dragongrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #d9eccf));
+  background: linear-gradient(#9369fa 50%, #d9eccf 50%);
+}
+
+.type-dragongrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #8251f9 50%, #cae5bc 50%);
+}
+
+.type-dragonelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #fadb61));
+  background: linear-gradient(#9369fa 50%, #fadb61 50%);
+}
+
+.type-dragonelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #8251f9 50%, #f9d649 50%);
+}
+
+.type-dragonice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #bde6e6));
+  background: linear-gradient(#9369fa 50%, #bde6e6 50%);
+}
+
+.type-dragonice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #8251f9 50%, #aadfdf 50%);
+}
+
+.type-dragonground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #e9d292));
+  background: linear-gradient(#9369fa 50%, #e9d292 50%);
+}
+
+.type-dragonground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #8251f9 50%, #e4c97d 50%);
+}
+
+.type-dragonflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#9369fa 50%, #cbbdf6 50%);
+}
+
+.type-dragonflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #8251f9 50%, #baa6f3 50%);
+}
+
+.type-dragonpoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #bc57bc));
+  background: linear-gradient(#9369fa 50%, #bc57bc 50%);
+}
+
+.type-dragonpoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #8251f9 50%, #b247b2 50%);
+}
+
+.type-dragonfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #d84b43));
+  background: linear-gradient(#9369fa 50%, #d84b43 50%);
+}
+
+.type-dragonfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #8251f9 50%, #d3372e 50%);
+}
+
+.type-dragonpsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #fa89ab));
+  background: linear-gradient(#9369fa 50%, #fa89ab 50%);
+}
+
+.type-dragonpsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #8251f9 50%, #f97099 50%);
+}
+
+.type-dragondark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #8f705c));
+  background: linear-gradient(#9369fa 50%, #8f705c 50%);
+}
+
+.type-dragondark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #8251f9 50%, #806452 50%);
+}
+
+.type-dragonrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #ccb657));
+  background: linear-gradient(#9369fa 50%, #ccb657 50%);
+}
+
+.type-dragonrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #8251f9 50%, #c6ae44 50%);
+}
+
+.type-dragonbug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #c9db30));
+  background: linear-gradient(#9369fa 50%, #c9db30 50%);
+}
+
+.type-dragonbug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #8251f9 50%, #bcce24 50%);
+}
+
+.type-dragonghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #8a74af));
+  background: linear-gradient(#9369fa 50%, #8a74af 50%);
+}
+
+.type-dragonghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #8251f9 50%, #7d64a5 50%);
+}
+
+.type-dragonsteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#9369fa 50%, #d7d7e4 50%);
+}
+
+.type-dragonsteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #8251f9 50%, #c7c7da 50%);
+}
+
+.type-dragondragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #9369fa));
+  background: linear-gradient(#9369fa 50%, #9369fa 50%);
+}
+
+.type-dragondragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #8251f9 50%, #8251f9 50%);
+}
+
+.type-dragonfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #9369fa), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#9369fa 50%, #ffe1eb 50%);
+}
+
+.type-dragonfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8251f9), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #8251f9 50%, #ffc8da 50%);
+}
+
+.type-fairy {
+  background-color: #ffe1eb;
+}
+
+.type-fairy:hover {
+  background-color: #ffaec9;
+}
+
+.type-fairynormal {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #bcbc97));
+  background: linear-gradient(#ffe1eb 50%, #bcbc97 50%);
+}
+
+.type-fairynormal:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #b2b288));
+  background: linear-gradient(0deg, #ffc8da 50%, #b2b288 50%);
+}
+
+.type-fairyfire {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #f39d60));
+  background: linear-gradient(#ffe1eb 50%, #f39d60 50%);
+}
+
+.type-fairyfire:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #f28f48));
+  background: linear-gradient(0deg, #ffc8da 50%, #f28f48 50%);
+}
+
+.type-fairywater {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #96b2f5));
+  background: linear-gradient(#ffe1eb 50%, #96b2f5 50%);
+}
+
+.type-fairywater:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #7fa1f2));
+  background: linear-gradient(0deg, #ffc8da 50%, #7fa1f2 50%);
+}
+
+.type-fairygrass {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #d9eccf));
+  background: linear-gradient(#ffe1eb 50%, #d9eccf 50%);
+}
+
+.type-fairygrass:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #cae5bc));
+  background: linear-gradient(0deg, #ffc8da 50%, #cae5bc 50%);
+}
+
+.type-fairyelectric {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #fadb61));
+  background: linear-gradient(#ffe1eb 50%, #fadb61 50%);
+}
+
+.type-fairyelectric:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #f9d649));
+  background: linear-gradient(0deg, #ffc8da 50%, #f9d649 50%);
+}
+
+.type-fairyice {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #bde6e6));
+  background: linear-gradient(#ffe1eb 50%, #bde6e6 50%);
+}
+
+.type-fairyice:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #aadfdf));
+  background: linear-gradient(0deg, #ffc8da 50%, #aadfdf 50%);
+}
+
+.type-fairyground {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #e9d292));
+  background: linear-gradient(#ffe1eb 50%, #e9d292 50%);
+}
+
+.type-fairyground:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #e4c97d));
+  background: linear-gradient(0deg, #ffc8da 50%, #e4c97d 50%);
+}
+
+.type-fairyflying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #cbbdf6));
+  background: linear-gradient(#ffe1eb 50%, #cbbdf6 50%);
+}
+
+.type-fairyflying:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #baa6f3));
+  background: linear-gradient(0deg, #ffc8da 50%, #baa6f3 50%);
+}
+
+.type-fairypoison {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #bc57bc));
+  background: linear-gradient(#ffe1eb 50%, #bc57bc 50%);
+}
+
+.type-fairypoison:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #b247b2));
+  background: linear-gradient(0deg, #ffc8da 50%, #b247b2 50%);
+}
+
+.type-fairyfighting {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #d84b43));
+  background: linear-gradient(#ffe1eb 50%, #d84b43 50%);
+}
+
+.type-fairyfighting:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #d3372e));
+  background: linear-gradient(0deg, #ffc8da 50%, #d3372e 50%);
+}
+
+.type-fairypsychic {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #fa89ab));
+  background: linear-gradient(#ffe1eb 50%, #fa89ab 50%);
+}
+
+.type-fairypsychic:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #f97099));
+  background: linear-gradient(0deg, #ffc8da 50%, #f97099 50%);
+}
+
+.type-fairydark {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #8f705c));
+  background: linear-gradient(#ffe1eb 50%, #8f705c 50%);
+}
+
+.type-fairydark:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #806452));
+  background: linear-gradient(0deg, #ffc8da 50%, #806452 50%);
+}
+
+.type-fairyrock {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #ccb657));
+  background: linear-gradient(#ffe1eb 50%, #ccb657 50%);
+}
+
+.type-fairyrock:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #c6ae44));
+  background: linear-gradient(0deg, #ffc8da 50%, #c6ae44 50%);
+}
+
+.type-fairybug {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #c9db30));
+  background: linear-gradient(#ffe1eb 50%, #c9db30 50%);
+}
+
+.type-fairybug:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #bcce24));
+  background: linear-gradient(0deg, #ffc8da 50%, #bcce24 50%);
+}
+
+.type-fairyghost {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #8a74af));
+  background: linear-gradient(#ffe1eb 50%, #8a74af 50%);
+}
+
+.type-fairyghost:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #7d64a5));
+  background: linear-gradient(0deg, #ffc8da 50%, #7d64a5 50%);
+}
+
+.type-fairysteel {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #d7d7e4));
+  background: linear-gradient(#ffe1eb 50%, #d7d7e4 50%);
+}
+
+.type-fairysteel:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #c7c7da));
+  background: linear-gradient(0deg, #ffc8da 50%, #c7c7da 50%);
+}
+
+.type-fairydragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #9369fa));
+  background: linear-gradient(#ffe1eb 50%, #9369fa 50%);
+}
+
+.type-fairydragon:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #8251f9));
+  background: linear-gradient(0deg, #ffc8da 50%, #8251f9 50%);
+}
+
+.type-fairyfairy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffe1eb), color-stop(50%, #ffe1eb));
+  background: linear-gradient(#ffe1eb 50%, #ffe1eb 50%);
+}
+
+.type-fairyfairy:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffc8da), color-stop(50%, #ffc8da));
+  background: linear-gradient(0deg, #ffc8da 50%, #ffc8da 50%);
+}
+/*# sourceMappingURL=styles.css.map */

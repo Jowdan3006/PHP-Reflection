@@ -45,6 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!empty($_POST['text'])) {
         $text = filter_input(INPUT_POST, 'text', FILTER_SANITIZE_STRING);
         $_SESSION['text'] = $text;
+        if (strlen($text) > 1000) {
+            $errorMessage .= 'size';
+            $error = true;
+        }
     } else {
         $errorMessage .= 'text';
         $error = true;
@@ -113,6 +117,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     echo '<div class="alert alert-warning" role="alert" style="width: 500px; margin: auto; margin-top: 25px;">';
                     echo "Please describe your issue. </div>";
                 }
+                if (strpos($_GET['s'], 'size') !== false) {
+                    echo '<div class="alert alert-warning" role="alert" style="width: 500px; margin: auto; margin-top: 25px;">';
+                    echo "Please describe your issue. </div>";
+                }
             }
         ?>
             <form method="post" action="contact.php" style="padding: 0 10rem; margin-top: 1rem;">
@@ -142,8 +150,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="text">Please describe here.</label>
-                    <textarea name="text" class="form-control" id="text" rows="3" placeholder="What was my grandsons name again?"><?php if(isset($_SESSION['text'])) { echo $_SESSION['text'];} ?></textarea>
+                    <label for="text">Please describe here. <small>(max. 1000 characters)</small></label>
+                    <textarea maxlength="1000" name="text" class="form-control" id="text" rows="3" placeholder="What was my grandsons name again?"><?php if(isset($_SESSION['text'])) { echo $_SESSION['text'];} ?></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send</button>
             </form>

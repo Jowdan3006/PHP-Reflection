@@ -1,0 +1,37 @@
+$typeColors: (
+    'normal'    : lighten(#A8A878, 10%),
+    'fire'      : lighten(#F08030, 10%),
+    'water'     : lighten(#6890F0, 10%),
+    'grass'     : lighten(#BCDEAA, 10%),
+    'electric'  : lighten(#F8D030, 10%),
+    'ice'       : lighten(#98D8D8, 10%),
+    'ground'    : lighten(#E0C068, 10%),
+    'flying'    : lighten(#A890F0, 10%),
+    'poison'    : lighten(#A040A0, 10%),
+    'fighting'  : lighten(#C03028, 10%),
+    'psychic'   : lighten(#F85888, 10%),
+    'dark'      : lighten(#705848, 10%),
+    'rock'      : lighten(#B8A038, 10%),
+    'bug'       : lighten(#A8B820, 10%),
+    'ghost'     : lighten(#705898, 10%),
+    'steel'     : lighten(#B8B8D0, 10%),
+    'dragon'    : lighten(#7038F8, 10%),
+    'fairy'     : lighten(#FFAEC9, 10%)
+);
+
+@each $type, $color in $typeColors {
+    .type-#{$type} {
+        background-color: $color;
+        &:hover {
+            background-color: darken($color, 10%);
+        }
+    }
+    @each $innerType, $innerColor in $typeColors {
+        .type-#{$type}#{$innerType} {
+            background: linear-gradient($color 50%, $innerColor 50%);
+            &:hover {
+                background: linear-gradient(0deg, darken($color, 5%) 50%, darken($innerColor, 5%) 50%);
+            }
+        }
+    }
+}

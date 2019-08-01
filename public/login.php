@@ -62,16 +62,16 @@ require_once INC_PATH . "/head.php";
         <?php 
         if (isset($_GET['s'])) {
             if (strpos($_GET['s'], 'user') !== false) {
-                echo '<div class="alert alert-warning" role="alert" style="width: 500px; margin: auto; margin-top: 25px;">';
+                echo '<div class="alert alert-warning" role="alert">';
                 echo "Please enter a Username. </div>";
             }
             if (strpos($_GET['s'], 'pass') !== false) {
-                echo '<div class="alert alert-warning" role="alert" style="width: 500px; margin: auto; margin-top: 25px;">';
+                echo '<div class="alert alert-warning" role="alert">';
                 echo "Please enter a password. </div>";
             }
         }
         if (isset($_GET['error'])) { ?>
-                <div class="alert alert-danger" role="alert" style="width: 500px; margin: auto; margin-top: 25px;">
+                <div class="alert alert-danger" role="alert">
                 <?php 
                     switch ($_GET['error']) {
                         case 'error':
