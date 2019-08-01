@@ -1,24 +1,12 @@
 <?php 
-require __DIR__ .'/../src/config.php'; 
+require_once __DIR__ .'/../src/config.php'; 
 
 $pageTitle = "MYPHPokémon - Pokédex";
-require INC_PATH . "/head.php";
-require LIB_PATH . "/MyPokémonUserDatabase.php";
-require LIB_PATH . "/PokeAPI.php";
-
-session_start();
-if (isset($_SESSION['pokemonList'])) {
-    $pokemonList = $_SESSION['pokemonList'];
-} else {
-    $pokemonList = new PokeAPI(null, 'list');
-}
-
-$db = new MyPokémonUserDatabase;
-$db->create();
-
-if (isset($userData)) {
-    $pokemonIdArray = $db->getFavoritePokemon($currentUserId);
-}
+require_once INC_PATH . "/head.php";
+require_once LIB_PATH . "/MyPokémonUserDatabase.php";
+require_once INC_PATH . "/userData.php";
+require_once LIB_PATH . "/PokeAPI.php";
+require_once INC_PATH . "/PokemonVariables.php";
 
 $pokeTypes = ['normal', 'fighting', 'flying', 'poison', 
             'ground', 'rock', 'bug', 'ghost', 'steel', 

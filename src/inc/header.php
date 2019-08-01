@@ -42,7 +42,9 @@
                             <p style="margin-top: 1rem;";>Welcome, <?php echo $userData->data->username ?><a class="nav-link" href="logout.php" style="display: inline; padding: 0; font-size: 85%;">(Log out)</a></p>
                         </li>
                         <li class="nav-item">
-                            <a href="profile.php"><img class="nav-link <?php echo $activePage == 'profile' ? 'profile-highlight' : '' ?>" src="<?php echo get_gravatar($currentUserEmail, 40); ?>"></a>
+                            <a href="profile.php" class="nav-link img-thumbnail <?php echo $activePage == 'profile' ? 'profile-highlight' : '' ?>">
+                                <img class="profile-image-header" src="<?php echo isset($profileImage) && $profileImage ? $profileImage : get_gravatar($currentUserEmail, 40)?>">
+                            </a>
                         </li>
                     <?php } else { ?>
                     <li class="nav-item">

@@ -4,24 +4,9 @@ require_once __DIR__ .'/../src/config.php';
 $pageTitle = "MYPHPokémon - Favourites";
 require_once INC_PATH . "/head.php";
 require_once LIB_PATH . "/MyPokémonUserDatabase.php";
+require_once INC_PATH . "/userData.php";
 require_once LIB_PATH . "/PokeAPI.php";
-
-session_start();
-$db = new MyPokémonUserDatabase;
-$db->create();
-
-if (isset($_SESSION['pokemonList'])) {
-    $pokemonList == $_SESSION['pokemonList'];
-} else {
-    $pokemonList = new PokeAPI(null, 'list');
-}
-
-if (isset($userData)) {
-    $pokemonIdArray = $db->getFavoritePokemon($currentUserId);
-    if (!isset($_SESSION['pokemonIdArray'])) {
-        $_SESSION['pokemonIdArray'] = $pokemonIdArray;
-    }
-}
+require_once INC_PATH . "/pokemonVariables.php";
 
 $message = '';
 $limit = 3;

@@ -5,19 +5,19 @@ $pageTitle = "MYPHPokémon - Contact us";
 require_once INC_PATH . "/head.php";
 require_once LIB_PATH . "/MyPokémonUserDatabase.php";
 require_once INC_PATH . "/userData.php";
+require_once LIB_PATH . "/PokeAPI.php";
+require_once INC_PATH . "/pokemonVariables.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-if (isset($userData)) {
-    // header('Location:index.php');
+if (!isset($_GET['s']) || !isset($_GET['error'])) {
+    unset($_SESSION['name']);
+    unset($_SESSION['email']);
+    unset($_SESSION['type']);
+    unset($_SESSION['text']);
 }
-if (isset($_GET['s']) || isset($_GET['error'])) {
-    session_start();
-} else {
-    session_start();
-    session_unset();
-}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $error = false;
     $errorMessage = '?s=';

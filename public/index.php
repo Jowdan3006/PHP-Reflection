@@ -4,28 +4,13 @@ require_once __DIR__ .'/../src/config.php';
 $pageTitle = "MYPHPokémon";
 require_once INC_PATH . "/head.php";
 require_once LIB_PATH . "/MyPokémonUserDatabase.php";
+require_once INC_PATH . "/userData.php";
 require_once LIB_PATH . "/PokeAPI.php";
-
-$db = new MyPokémonUserDatabase;
-$db->create();
-
-session_start();
-if (isset($_SESSION['pokemonList'])) {
-    $pokemonList == $_SESSION['pokemonList'];
-} else {
-    $pokemonList = new PokeAPI(null, 'list');
-}
+require_once INC_PATH . "/pokemonVariables.php";
 
 $pokemonTopArray = $db->getTopPokemon();
 if (!isset($_SESSION['pokemonTopArray'])) {
     $_SESSION['pokemonTopArray'] = $pokemonTopArray;
-}
-
-if (isset($userData)) {
-    $pokemonIdArray = $db->getFavoritePokemon($currentUserId);
-    if (!isset($_SESSION['pokemonIdArray']) || $_SESSION['pokemonIdArray'] != $pokemonIdArray) {
-        $_SESSION['pokemonIdArray'] = $pokemonIdArray;
-    }
 }
 
 if (!empty($pokemonTopArray)) {

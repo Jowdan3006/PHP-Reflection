@@ -11,7 +11,9 @@ $('.fa-star').on('click', (e) => {
         data: { 'buttonPokeId' : buttonPokeId },
         success: (response) => {
             const jsonData = JSON.parse(response);
-            if (jsonData.result >= 0) {
+            if (jsonData.result == 'full') {
+                console.log('FULL!');
+            } else if (jsonData.result >= 0) {
                 $(e.target).toggleClass('far fas');
                 $(e.target).parent().children('.favorite-count').text(jsonData.result);
             }

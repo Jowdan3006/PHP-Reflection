@@ -9,6 +9,7 @@ if (isset($_SESSION['pokemonList'])) {
     $pokemonList = new PokeAPI(null, 'list');
 }
 
+
 if (isset($_SESSION['pokemonNames'])) {
     $pokemonNames = $_SESSION['pokemonNames'];
 } else {

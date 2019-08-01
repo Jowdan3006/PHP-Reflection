@@ -303,7 +303,9 @@ class MyPokémonUserDatabase
             $userEntry = $this->getValue('*', 'user_id', $user, 'favorite_pokemon');
             $change = false;
             $change = $this->updateFavorite($user, $pokemonId, $userEntry, 'favorite_pokemon');
-            if ($change) {
+            if ($change === 'full') {
+                return 'full';
+            } else if ($change) {
                 return $this->countFavoritePokemon($pokemonId, $user);
             } else {
                 return false;
@@ -318,12 +320,16 @@ class MyPokémonUserDatabase
             if ($table == 'favorite_pokemon') {
                 if (!empty($userEntry['pokemon_id'])) {
                     $pokemonIdArray = explode(', ', $userEntry['pokemon_id']);
-                    if (($pokemonIdKey = array_search($pokemonId, $pokemonIdArray)) !== FALSE) {
-                        unset($pokemonIdArray[$pokemonIdKey]);
+                    if (count($pokemonIdArray) < 20) {
+                        if (($pokemonIdKey = array_search($pokemonId, $pokemonIdArray)) !== FALSE) {
+                            unset($pokemonIdArray[$pokemonIdKey]);
+                        } else {
+                            $pokemonIdArray[] = $pokemonId;
+                        }
+                        $pokemonIdString = implode(', ', $pokemonIdArray);
                     } else {
-                        $pokemonIdArray[] = $pokemonId;
+                        return 'full';
                     }
-                    $pokemonIdString = implode(', ', $pokemonIdArray);
                 } else {
                     $pokemonIdString = $pokemonId;
                 }
@@ -410,6 +416,29 @@ class MyPokémonUserDatabase
             return $pokemonIdArray;
         }
         return null;
+    }
+
+    public function getProfile($userId)
+    {
+        return $this->getValue('*', 'user_id', $userId, 'user_profile');
+    }
+
+    public function setProfile($userId, $type, $pokeId)
+    {
+        $userProfile = $this->getValue('*', 'user_id', $userId, 'user_profile');
+        if ($type == 'poke') {
+            if ($userProfile) {
+                $this->changeValues(['type', 'pokemon_id'], [1, $pokeId], 'user_id', $userId, 'user_profile');
+            } else {
+                $this->insertValues(['user_id', 'type', 'pokemon_id'], [$userId, 1, $pokeId], 'user_profile');
+            }
+        } else if ($type == 'grav') {
+            if ($userProfile) {
+                $this->changeValue('type', 2, 'user_id', $userId, 'user_profile');
+            } else {
+                $this->insertValues(['user_id', 'type', 'pokemon_id'], [$userId, 2, 'null'], 'user_profile');
+            }
+        }
     }
 }
 ?>
