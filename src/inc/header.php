@@ -1,17 +1,18 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
+            <div class="container" id="headerAlert">
             <?php 
             if (isset($expiredSession) && $expiredSession && isset($_COOKIE['logged'])) { 
                 setcookie('logged', "", time(), '/');?>
-            <div class="container" id="headerAlert">
+            
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">Session has expired.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-            </div>
             <?php } ?>
+            </div>
             <a class="navbar-brand d-flex" href="index.php">
                 <div class="logo"></div>
                 MYPHPokémon

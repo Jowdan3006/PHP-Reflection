@@ -36,12 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 ">
+                <div class="col-md-6 ">
                     <div class="profile-picture img-thumbnail">
                         <img src="<?php echo $profileImage ? $profileImage : $gravImage?>">
                     </div>
                 </div>
-                <form method="post" action="profile.php" class="col-sm-6">
+                <form method="post" action="profile.php" class="col-md-6">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="profilePic" id="grav" value="grav" <?php echo $profileImage ? '' : 'checked' ?>>
                         <label class="form-check-label" for="grav">Use Gravatar</label>

@@ -320,16 +320,15 @@ class MyPokémonUserDatabase
             if ($table == 'favorite_pokemon') {
                 if (!empty($userEntry['pokemon_id'])) {
                     $pokemonIdArray = explode(', ', $userEntry['pokemon_id']);
-                    if (count($pokemonIdArray) < 20) {
                         if (($pokemonIdKey = array_search($pokemonId, $pokemonIdArray)) !== FALSE) {
                             unset($pokemonIdArray[$pokemonIdKey]);
-                        } else {
+                        } else if (count($pokemonIdArray) < 20) {
                             $pokemonIdArray[] = $pokemonId;
+                        } else {
+                            return 'full';
                         }
                         $pokemonIdString = implode(', ', $pokemonIdArray);
-                    } else {
-                        return 'full';
-                    }
+                    
                 } else {
                     $pokemonIdString = $pokemonId;
                 }

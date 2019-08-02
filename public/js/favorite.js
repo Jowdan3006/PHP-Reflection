@@ -1,3 +1,4 @@
+let alert = false;
 $('.fa-star').on('click', (e) => {
     
     if (typeof $(e.target).val() !== 'undefined') {
@@ -12,7 +13,11 @@ $('.fa-star').on('click', (e) => {
         success: (response) => {
             const jsonData = JSON.parse(response);
             if (jsonData.result == 'full') {
-                console.log('FULL!');
+                if (!alert) {
+                    $('#headerAlert').append('<div class="alert alert-warning alert-dismissible fade show" role="alert">You have reached the limit of 20 favorite Pokemon.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                    alert = true
+                    closeAlert();
+                }
             } else if (jsonData.result >= 0) {
                 $(e.target).toggleClass('far fas');
                 $(e.target).parent().children('.favorite-count').text(jsonData.result);
@@ -20,3 +25,9 @@ $('.fa-star').on('click', (e) => {
         }
     });
 })
+
+function closeAlert() {
+    $('#headerAlert').children('.alert').children('.close').on('click', () =>{
+        alert = false;
+    })
+}

@@ -35,15 +35,21 @@ $pokemonGames: (
 
 @each $game, $color in $pokemonGames {
     .version-#{$game} {
-        background-color: $color;
-        color: darken($color, 50%);
+        border-bottom: solid 3px $color
     }
 }
 
 .badge-pill {
-    margin-right: 2px;
+    margin-right: 4px;
+    margin-bottom: 4px;
     text-indent: 1px;
     line-height: 1.25;
+    padding: 2px;
+    background-color: #fff;
+    min-width: 25px;
+    color: #333;
+    border-radius: 0;
+    text-transform: capitalize;
 }
 
 /*
@@ -147,12 +153,6 @@ a[href = "profile.php"] {
     box-shadow: inset 0 0 3px 1px rgba(33,33,33,0.5);
 }
 
-@media only screen and (max-width: 992px){
-    .navbar-nav {
-        text-align: center;
-    }
-}
-
 /* 
     Profile Styling 
 */
@@ -209,6 +209,10 @@ form[action = "profile.php"] button {
     filter: grayscale(75%);
 }
 
+.row {
+    position: relative;
+}
+
 /*
     Card styling 
 */
@@ -237,8 +241,8 @@ form[action = "profile.php"] button {
     height: 350px;
 
     img {
-        max-width: 310px;
-        max-height: 310px;
+        max-width: calc(100% - 10px);
+        max-height: calc(100% - 10px);
     }
 
     &::before {
@@ -254,15 +258,14 @@ form[action = "profile.php"] button {
     width: auto;
     margin: auto;
     margin-top: 12px;
-    height: 650px;
+    height: 675px;
     .btn {
-        font-weight: 900;
+        font-weight: 500;
         color: #333;
         position: absolute;
         bottom: 15px;
         left: 35px;
-        border: 1px solid #ccc;
-        -webkit-text-stroke: 0.25px #dedede;
+        border-radius: 0;
     }
 }
 
@@ -292,17 +295,12 @@ form[action = "profile.php"] button {
     position: absolute;
     right: 3px;
     top: 3px;
-    border-radius: 50% 0 50% 50%;
-    width: 2.5rem;
+    border-radius: 50px 0 0 50px;
+    width: 5rem;
     height: 2.5rem;
+    text-align: left;
+    text-indent: 1rem;
     line-height: 1.9;
-    text-indent: 2px;
-    &.with-icon {
-        border-radius: 50px 0 0 50px;
-        width: 5rem;
-        text-align: left;
-        text-indent: 1rem;
-    }
     &::before {
         content: '';
         display: inline-block;
@@ -343,4 +341,108 @@ form[action = "profile.php"] button {
     background-color: #dedede;
     border-radius: 25px;
     max-width: 40px;
+}
+
+/*
+    Media queries
+*/
+@media only screen and (min-width: 1px) { // Lazy fix for bootstrap.
+    form[action = "pokedex.php"] {
+        .form-control {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+        }
+        .form-inline .form-check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            padding-left: 0;
+        }
+        
+        .form-inline label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+    }
+}
+@media only screen and (max-width: 575px) {
+    .pagination {
+        max-width: 368px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 767px){
+    .card-deck {
+        flex-flow: column nowrap;
+        .card {
+            margin: auto;
+            margin-bottom: 1rem;
+        }
+    }
+    .row .col-md-6 {
+        width: initial;
+        margin: auto;
+        .form-check:first-child {
+            margin-top: 1rem;
+        }
+        .btn {
+            bottom: -50px;
+        }
+    }
+}
+@media only screen and (max-width: 992px) and (min-width: 767px) {
+    .card {
+        height: 500px;
+        .card-img-top {
+            height: 200px;
+        }
+        .card-body {
+            .carousel-control-next {
+                right: -30px;
+            }
+            .carousel-control-prev {
+                left: -30px;
+            }
+            .card-title {
+                font-size: 1rem;
+                margin-left: 0;
+            }
+            .carousel-inner {
+                font-size: .75em;
+                .carousel-item p.d-block.w-100 {
+                    padding: 0!important;
+                }
+            }
+            .btn {
+                font-size: .75rem;
+                left: 20px;
+                padding: .175rem .45rem;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+        .nav-item {
+            p {
+                margin-bottom: .5rem;
+            }
+        }
+        .img-thumbnail {
+            margin: 0 auto 4px auto;
+        }
+    }
+    form[action = "contact.php"] {
+        padding: 0!important;
+    }
+}
+@media only screen and (max-width: 1199px){
+    .card-img-top {
+        height: 300px;
+    }
 }

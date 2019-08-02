@@ -21,16 +21,19 @@ $typeColors: (
 
 @each $type, $color in $typeColors {
     .type-#{$type} {
-        background-color: $color;
+        border: 3px solid $color;
         &:hover {
-            background-color: darken($color, 10%);
+            border: 3px solid darken($color, 10%);
         }
     }
     @each $innerType, $innerColor in $typeColors {
-        .type-#{$type}#{$innerType} {
-            background: linear-gradient($color 50%, $innerColor 50%);
-            &:hover {
-                background: linear-gradient(0deg, darken($color, 5%) 50%, darken($innerColor, 5%) 50%);
+        @if $type != $innerType {
+            .type-#{$type}#{$innerType} {
+                border: 3px solid transparent; 
+                border-image: linear-gradient($color 50%, $innerColor 50%) 24% round;
+                &:hover {
+                    border-image: linear-gradient(darken($color, 10%) 50%, darken($innerColor, 10%) 50%) 24% round;
+                }
             }
         }
     }

@@ -11,10 +11,10 @@
         <p class="favorite-count"><?php echo $db->getCountFavoritePokemon($pokemon->getId(), false) ?: 0 ?></p>
     <?php } ?>
     <div class="card-img-top">
-        <img src="<?php echo $pokemon->getImage(); ?>" alt="Card image cap">
+        <img src="<?php echo $pokemon->getImage(); ?>" alt="Image of Pokémon <?php echo $pokemon->getName()?>">
     </div>
     <div class="card-body">
-        <h5 class="card-title"><?php echo $pokemon->getName(); echo $pokemon->getId(); ?></h5>
+        <h5 class="card-title"><?php echo $pokemon->getName(); echo ' #'.$pokemon->getId(); ?></h5>
         <div id="FlavorText" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <?php
@@ -47,6 +47,6 @@
                 <i class="fas fa-chevron-right"></i>
             </a>
         </div>
-        <a href="<?php echo "https://pokemondb.net/pokedex/".$pokemon->getName().'"'; ?>" class="btn <?php echo 'type-'; foreach ($pokemon->getPokemonType() as $type) { echo $type; }; ?>" target="_blank">View on Pokémon Database</a>
+        <a href="<?php echo "https://pokemondb.net/pokedex/".$pokemon->getName().'"'; ?>" class="btn <?php echo 'type-'; foreach ($pokemon->getPokemonType() as $type) { echo $type; }; ?>" target="_blank"><span>View on Pokémon Database</span></a>
     </div>
 </div>
