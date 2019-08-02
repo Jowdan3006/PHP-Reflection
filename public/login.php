@@ -102,7 +102,7 @@ require_once INC_PATH . "/head.php";
                 <input type="password" class="form-control" id="password" name="pass" placeholder="Password">
             </div>
             <div style="margin-bottom: 1rem;">
-                <a href="<?php echo PUB_PATH . "resetPass.php" ?>">Forgot your Password?</a>
+                <a href="<?php echo "resetPass.php" ?>">Forgot your Password?</a>
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
