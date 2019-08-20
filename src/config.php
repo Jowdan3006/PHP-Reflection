@@ -2,8 +2,8 @@
 /*
     Error reporting.
 */
-ini_set("error_reporting", "true");
-error_reporting(E_ALL);
+// ini_set("error_reporting", "true");
+// error_reporting(E_ALL);
 
 /*
     Creating constants for include folder path.
